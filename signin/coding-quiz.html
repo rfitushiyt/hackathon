@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coding Quiz | CODEBLOOM</title>
+
+    <link rel="stylesheet" href="coding-quiz.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="index.php" class="logo">
+            <i class="fa-solid fa-crown"></i>
+            CODE<span>BLOOM</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Register</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Our Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="games.html">Mini Games</a>
+            <a href="code-lab.html">Code Lab</a>
+            <a href="coding-quiz.html" class="active">Coding Quiz</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <span class="tag">TEST YOUR KNOWLEDGE</span>
+
+            <h1>CODING <span>QUIZ</span></h1>
+
+            <p>
+                Challenge yourself, test your programming knowledge
+                and become a better developer.
+            </p>
+
+            <div class="quiz-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+        </section>
+
+
+        <section class="quiz-container">
+
+            <div class="quiz-top">
+
+                <div>
+                    <span class="question-label">YOUR CHALLENGE</span>
+                    <h2>Let's test your skills!</h2>
+                </div>
+
+                <div class="score-box">
+                    <i class="fa-solid fa-star"></i>
+                    SCORE: <span id="score">0</span>
+                </div>
+
+            </div>
+
+
+            <div class="progress-container">
+
+                <div class="progress-info">
+                    <span id="questionNumber">QUESTION 1 / 10</span>
+                    <span id="progressPercent">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+
+            </div>
+
+
+            <div class="question-box">
+
+                <span class="category">HTML • CSS • JAVASCRIPT</span>
+
+                <h3 id="question">
+                    What does HTML stand for?
+                </h3>
+
+                <div class="options" id="options">
+
+                    <button class="option" data-answer="0">
+                        Hyper Text Markup Language
+                    </button>
+
+                    <button class="option" data-answer="1">
+                        High Text Machine Language
+                    </button>
+
+                    <button class="option" data-answer="2">
+                        Hyper Tool Multi Language
+                    </button>
+
+                    <button class="option" data-answer="3">
+                        Home Text Markup Language
+                    </button>
+
+                </div>
+
+                <p id="feedback"></p>
+
+                <button id="nextButton">
+                    NEXT QUESTION
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <div class="quiz-result" id="quizResult">
+
+                <i class="fa-solid fa-trophy"></i>
+
+                <h2>QUIZ COMPLETED!</h2>
+
+                <p>Your final score:</p>
+
+                <h1 id="finalScore">0 / 10</h1>
+
+                <p id="resultMessage"></p>
+
+                <button id="restartButton">
+                    <i class="fa-solid fa-rotate"></i>
+                    TRY AGAIN
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="quiz-bottom">
+
+            <div>
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML</span>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-js"></i>
+                <span>JAVASCRIPT</span>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        CODE YOUR FUTURE © 2026
+        <p>LEARN • PRACTICE • CREATE</p>
+    </footer>
+
+
+    <script src="coding-quiz.js"></script>
+
+</body>
+</html>
