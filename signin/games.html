@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Games | CODEBLOOM</title>
+
+    <link rel="stylesheet" href="games.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">CODE<span>BLOOM</span></a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Our Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="games.html" class="active">Mini Games</a>
+        </div>
+
+        <a href="index.html#signupForm" class="join-btn">Join Us</a>
+    </nav>
+
+
+    <header class="hero">
+        <p class="small-title">CODE • PLAY • REPEAT</p>
+        <h1>ENTER THE <span>GAME ZONE</span></h1>
+        <p>Challenge your brain, test your skills and have fun!</p>
+    </header>
+
+
+    <main class="games-container">
+
+        <!-- GAME 1: TYPING SPEED -->
+
+        <section class="game-card">
+            <div class="game-icon"><i class="fa-solid fa-keyboard"></i></div>
+
+            <h2>01. Typing Speed</h2>
+            <p>Test how fast you can type!</p>
+
+            <div class="typing-text" id="typingText">
+                Code your dreams and create your future.
+            </div>
+
+            <textarea id="typingInput" placeholder="Start typing here..."></textarea>
+
+            <div class="game-info">
+                <span>Time: <b id="typingTime">30</b>s</span>
+                <span>WPM: <b id="wpm">0</b></span>
+            </div>
+
+            <p id="typingResult" class="result"></p>
+
+            <button class="game-btn" id="typingStart">START</button>
+        </section>
+
+
+        <!-- GAME 2: MEMORY MATCH -->
+
+        <section class="game-card">
+            <div class="game-icon"><i class="fa-solid fa-brain"></i></div>
+
+            <h2>02. Memory Match</h2>
+            <p>Find all matching programming symbols.</p>
+
+            <div class="memory-grid" id="memoryGrid"></div>
+
+            <p id="memoryResult" class="result">Matches: 0 / 6</p>
+
+            <button class="game-btn" id="memoryRestart">RESTART</button>
+        </section>
+
+
+        <!-- GAME 3: CODE QUIZ -->
+
+        <section class="game-card">
+            <div class="game-icon"><i class="fa-solid fa-code"></i></div>
+
+            <h2>03. Code Quiz</h2>
+            <p>How much do you know about coding?</p>
+
+            <h3 id="quizQuestion">Which language is used to style websites?</h3>
+
+            <div class="quiz-options" id="quizOptions">
+                <button class="option-btn">HTML</button>
+                <button class="option-btn">CSS</button>
+                <button class="option-btn">Python</button>
+                <button class="option-btn">Java</button>
+            </div>
+
+            <p id="quizResult" class="result">Question 1 / 5</p>
+
+            <button class="game-btn" id="quizNext">NEXT QUESTION</button>
+        </section>
+
+
+        <!-- GAME 4: GUESS THE NUMBER -->
+
+        <section class="game-card">
+            <div class="game-icon"><i class="fa-solid fa-hashtag"></i></div>
+
+            <h2>04. Guess the Number</h2>
+            <p>Guess a number between 1 and 100.</p>
+
+            <input type="number" id="guessInput" placeholder="Enter your guess..." min="1" max="100">
+
+            <button class="game-btn" id="guessBtn">GUESS</button>
+
+            <p id="guessResult" class="result">You have 7 attempts!</p>
+
+            <button class="restart-btn" id="guessRestart">Try Again</button>
+        </section>
+
+
+        <!-- GAME 5: ROCK PAPER SCISSORS -->
+
+        <section class="game-card">
+            <div class="game-icon"><i class="fa-solid fa-hand-fist"></i></div>
+
+            <h2>05. Rock Paper Scissors</h2>
+            <p>Choose your move and beat the computer!</p>
+
+            <div class="rps-options">
+                <button class="rps-btn" data-choice="rock">✊</button>
+                <button class="rps-btn" data-choice="paper">✋</button>
+                <button class="rps-btn" data-choice="scissors">✌️</button>
+            </div>
+
+            <p id="rpsResult" class="result">Make your move!</p>
+
+            <p class="score">
+                You: <b id="playerScore">0</b>
+                |
+                Computer: <b id="computerScore">0</b>
+            </p>
+        </section>
+
+
+        <!-- GAME 6: CATCH THE BUG -->
+
+        <section class="game-card">
+            <div class="game-icon"><i class="fa-solid fa-bug"></i></div>
+
+            <h2>06. Catch the Bug</h2>
+            <p>Click the bug as many times as possible!</p>
+
+            <div class="bug-area" id="bugArea">
+                <span id="bug">🐛</span>
+                <p id="bugMessage">Press START to play!</p>
+            </div>
+
+            <div class="game-info">
+                <span>Time: <b id="bugTime">15</b>s</span>
+                <span>Score: <b id="bugScore">0</b></span>
+            </div>
+
+            <button class="game-btn" id="bugStart">START GAME</button>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <h2>CODE<span>BLOOM</span></h2>
+        <p>HTML • CSS • JAVASCRIPT</p>
+        <p>CODE YOUR FUTURE © 2026</p>
+    </footer>
+
+
+    <script src="games.js"></script>
+
+</body>
+</html>

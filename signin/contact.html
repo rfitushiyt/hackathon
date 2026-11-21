@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | CODEBLOOM</title>
+
+    <link rel="stylesheet" href="contact.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BACKGROUND EFFECTS -->
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="grid-overlay"></div>
+
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                CODE<span>BLOOM</span>
+                <small>BUILD. CODE. INNOVATE.</small>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Register</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Our Shop</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="games.html">Mini Games</a>
+            </div>
+
+            <a href="index.html#signup" class="nav-btn">
+                Join Us ↗
+            </a>
+
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="contact-hero">
+
+        <div class="hero-tag">
+            <span></span>
+            LET'S CONNECT
+        </div>
+
+        <h1>
+            GET IN <span>TOUCH.</span>
+        </h1>
+
+        <p>
+            Have a question, an idea, or simply want to connect?
+            We'd love to hear from you.
+        </p>
+
+        <div class="hero-decoration">&lt;/&gt;</div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <main class="contact-container">
+
+        <!-- LEFT SIDE -->
+        <section class="contact-info">
+
+            <span class="section-label">01 — CONTACT INFORMATION</span>
+
+            <h2>
+                LET'S BUILD<br>
+                SOMETHING <span>GREAT.</span>
+            </h2>
+
+            <p class="info-description">
+                Every great idea starts with a conversation.
+                Send us a message and let's make something amazing together.
+            </p>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">@</div>
+
+                <div>
+                    <h3>Email Us</h3>
+                    <p>hello@codebloom.com</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">✦</div>
+
+                <div>
+                    <h3>Our Platform</h3>
+                    <p>CODEBLOOM Digital Community</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">&lt;/&gt;</div>
+
+                <div>
+                    <h3>Our Mission</h3>
+                    <p>Build. Code. Innovate.</p>
+                </div>
+
+            </div>
+
+
+            <div class="contact-note">
+                <span>✧</span>
+                <p>
+                    Great things happen when creative minds connect.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE - FORM -->
+        <section class="contact-form-card">
+
+            <div class="form-heading">
+                <span class="section-label">02 — SEND A MESSAGE</span>
+
+                <h2>LET'S TALK<span>.</span></h2>
+
+                <p>Fill in the details below and reach out to us.</p>
+            </div>
+
+
+            <form id="contactForm">
+
+                <div class="input-row">
+
+                    <div class="form-group">
+                        <label for="contactName">Your Name</label>
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            name="name"
+                            placeholder="Enter your name"
+                            autocomplete="name"
+                            required
+                            minlength="2"
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="contactSubject">Subject</label>
+
+                    <input
+                        type="text"
+                        id="contactSubject"
+                        name="subject"
+                        placeholder="What is this about?"
+                        required
+                        minlength="3"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="contactMessage">Your Message</label>
+
+                    <textarea
+                        id="contactMessage"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message here..."
+                        required
+                        minlength="10"
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="send-btn">
+                    SEND MESSAGE <span>↗</span>
+                </button>
+
+                <p class="form-status" id="formStatus" aria-live="polite"></p>
+
+                <p class="form-note">
+                    ✦ This is a demonstration contact form.
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- CTA -->
+    <section class="contact-cta">
+
+        <span>YOUR IDEAS MATTER</span>
+
+        <h2>KEEP CREATING. <span>KEEP INNOVATING.</span></h2>
+
+        <p>Your next big idea could start today.</p>
+
+        <a href="shop.html" class="cta-btn">
+            EXPLORE OUR SHOP ↗
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            CODE<span>BLOOM</span>
+        </div>
+
+        <p>HTML • CSS • JAVASCRIPT</p>
+
+        <div class="footer-line"></div>
+
+        <small>CODE YOUR FUTURE © 2026 | ALL RIGHTS RESERVED</small>
+
+    </footer>
+
+
+    <!-- DEMO FORM SCRIPT -->
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const formStatus = document.getElementById("formStatus");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            formStatus.textContent =
+                "Thank you! Your demo message has been submitted.";
+
+            formStatus.classList.add("success");
+
+            contactForm.reset();
+
+        });
+    </script>
+
+</body>
+</html>
