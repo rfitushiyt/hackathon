@@ -19,12 +19,13 @@
 
     <header class="navbar">
 
-        <a href="index.php" class="logo">
+        <a href="home.html" class="logo">
             <i class="fa-solid fa-crown"></i>
             CODE<span>BLOOM</span>
         </a>
 
         <nav>
+            <a href="home.html">HOME</a>
             <a href="index.html">Register</a>
             <a href="about.html">About</a>
             <a href="shop.html">Our Shop</a>
@@ -57,6 +58,50 @@
 
         </section>
 
+
+        <!-- RANDOM CODING CHALLENGE -->
+
+        <section class="challenge-section">
+
+            <div class="challenge-card">
+
+                <div class="challenge-top">
+
+                    <span class="challenge-tag">
+                        <i class="fa-solid fa-bolt"></i>
+                        RANDOM CODING CHALLENGE
+                    </span>
+
+                    <span id="challengeLevel" class="challenge-level">
+                        EASY
+                    </span>
+
+                </div>
+
+                <h2 id="challengeTitle">Build a Profile Card</h2>
+
+                <p id="challengeDescription">
+                    Create a modern personal profile card using HTML and CSS.
+                </p>
+
+                <h3>
+                    <i class="fa-solid fa-list-check"></i>
+                    YOUR TASKS
+                </h3>
+
+                <ul id="challengeTasks"></ul>
+
+                <button id="newChallenge">
+                    <i class="fa-solid fa-shuffle"></i>
+                    NEW RANDOM CHALLENGE
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CODE EDITOR -->
 
         <section class="editor-section">
 
@@ -102,15 +147,20 @@
                     <div class="code-inputs">
 
                         <div class="code-box">
+
                             <label>HTML CODE</label>
+
                             <textarea id="htmlCode" placeholder="Write your HTML here..."><h1>Hello CODEBLOOM!</h1>
 <p>My first website.</p>
 <button>Click Me</button></textarea>
+
                         </div>
 
 
                         <div class="code-box">
+
                             <label>CSS CODE</label>
+
                             <textarea id="cssCode" placeholder="Write your CSS here...">body {
     background: #170A2B;
     color: white;
@@ -130,14 +180,18 @@ button {
     border: none;
     border-radius: 20px;
 }</textarea>
+
                         </div>
 
 
                         <div class="code-box">
+
                             <label>JAVASCRIPT CODE</label>
+
                             <textarea id="jsCode" placeholder="Write your JavaScript here...">document.querySelector("button").onclick = function() {
     alert("Welcome to CODEBLOOM!");
 };</textarea>
+
                         </div>
 
                     </div>
@@ -146,12 +200,14 @@ button {
                     <div class="preview-box">
 
                         <div class="preview-heading">
+
                             <span>
                                 <i class="fa-solid fa-eye"></i>
                                 LIVE PREVIEW
                             </span>
 
                             <span class="preview-status">READY</span>
+
                         </div>
 
                         <iframe
@@ -183,6 +239,8 @@ button {
 
         </section>
 
+
+        <!-- SKILLS SECTION -->
 
         <section class="tips-section">
 
@@ -219,6 +277,7 @@ button {
         CODE YOUR FUTURE © 2026
         <p>HTML • CSS • JAVASCRIPT</p>
     </footer>
+
 
     <script src="code-lab.js"></script>
 

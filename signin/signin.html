@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In | CODEBLOOM</title>
+
+    <link rel="stylesheet" href="signin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-effects">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <div class="floating-code code-one">&lt;/&gt;</div>
+    <div class="floating-code code-two">{ }</div>
+    <div class="floating-code code-three">0101</div>
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ♛ CODE<span>BLOOM</span>
+        </a>
+
+        <a href="index.html" class="back-btn">
+            <i>←</i> Back to Register
+        </a>
+
+    </header>
+
+    <main class="signin-container">
+
+        <div class="signin-card">
+
+            <div class="form-icon">&lt;/&gt;</div>
+
+            <span class="welcome-tag">WELCOME BACK, DEVELOPER</span>
+
+            <h1>Sign <span>In</span></h1>
+
+            <p class="subtitle">
+                Continue your journey with CODEBLOOM.
+            </p>
+
+            <form id="signinForm">
+
+                <div class="input-group">
+                    <label for="loginEmail">EMAIL ADDRESS</label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="loginPassword">PASSWORD</label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <div class="remember-row">
+                    <label>
+                        <input type="checkbox" id="rememberMe">
+                        Remember me
+                    </label>
+                </div>
+
+                <button type="submit" class="signin-btn">
+                    SIGN IN <span>✦</span>
+                </button>
+
+                <p id="signinMessage"></p>
+
+            </form>
+
+            <div class="bottom-text">
+                <p>New to CODEBLOOM?</p>
+                <a href="index.html">Create an account</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        HTML • CSS • JAVASCRIPT
+        <p>CODE YOUR FUTURE © 2026</p>
+    </footer>
+
+    <script src="signin.js"></script>
+
+</body>
+</html>

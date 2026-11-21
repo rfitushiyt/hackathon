@@ -399,3 +399,93 @@ footer p {
         padding-top: 55px;
     }
 }
+
+/* =====================================
+   GAME FOCUS MODE
+===================================== */
+
+.games-container.game-focus {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 65vh;
+    padding: 20px 25px 80px;
+}
+
+.game-card.focused {
+    width: 100%;
+    max-width: 850px;
+    padding: 45px;
+    border: 1px solid var(--pink);
+    box-shadow:
+        0 0 25px #FF2E9350,
+        0 0 70px #7200FF35;
+    animation: gameAppear 0.4s ease;
+}
+
+.game-card.focused:hover {
+    transform: none;
+}
+
+.game-card.hidden-game {
+    display: none;
+}
+
+.open-game-btn,
+.back-games-btn {
+    display: block;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.open-game-btn {
+    background: linear-gradient(90deg, var(--purple), var(--pink));
+    margin: 20px auto 0;
+}
+
+.open-game-btn:hover,
+.back-games-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--pink);
+}
+
+.back-games-btn {
+    background: #ffffff12;
+    border: 1px solid var(--pink);
+    margin: 0 auto 30px;
+}
+
+body.game-mode .hero,
+body.game-mode footer {
+    display: none;
+}
+
+body.game-mode .games-container {
+    padding-top: 40px;
+}
+
+@keyframes gameAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 650px) {
+    .game-card.focused {
+        padding: 25px 18px;
+    }
+}

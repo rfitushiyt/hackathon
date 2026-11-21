@@ -1,20 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>HTML Starter Kit | CODEBLOOM</title>
 
     <link rel="stylesheet" href="code-details.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <nav class="navbar">
     <a href="index.html" class="logo">CODE<span>BLOOM</span></a>
-    <a href="shop.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Shop</a>
+
+    <a href="shop.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to Shop
+    </a>
 </nav>
 
 <main class="details-container">
@@ -24,30 +30,659 @@
     <h1>HTML <span>STARTER KIT</span></h1>
 
     <p class="description">
-        Start your web development journey with HTML!
-        Learn how to structure websites and create your first web pages.
+        Learn HTML by doing! Explore elements, experiment with code,
+        build your first webpage and test your knowledge.
     </p>
 
-    <h2>WHAT'S INCLUDED?</h2>
+    <!-- COURSE INTRO -->
 
-    <ul class="features">
-        <li><i class="fa-solid fa-check"></i> HTML beginner guide</li>
-        <li><i class="fa-solid fa-check"></i> HTML tags and elements guide</li>
-        <li><i class="fa-solid fa-check"></i> Forms and input elements</li>
-        <li><i class="fa-solid fa-check"></i> Links and images tutorial</li>
-        <li><i class="fa-solid fa-check"></i> 3 beginner HTML projects</li>
-        <li><i class="fa-solid fa-check"></i> Practice exercises</li>
-    </ul>
+    <section class="course-intro">
 
-    <div class="price">$9.99</div>
+        <div>
+            <h2>WELCOME TO HTML!</h2>
 
-    <a href="shop.html" class="buy-btn">BACK TO SHOP</a>
+            <p>
+                HTML stands for HyperText Markup Language.
+                It is used to create the structure of websites.
+                Think of HTML as the skeleton of a webpage!
+            </p>
+
+            <div class="course-stats">
+                <span><i class="fa-solid fa-code"></i> 6 Elements</span>
+                <span><i class="fa-solid fa-gamepad"></i> 2 Challenges</span>
+                <span><i class="fa-solid fa-clock"></i> Beginner</span>
+            </div>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700"
+            alt="Programming workspace"
+        >
+
+    </section>
+
+    <!-- CLICK AND EXPLORE -->
+
+    <section class="learning-section">
+
+        <div class="section-title">
+            <span class="tag">INTERACTIVE LESSON</span>
+            <h2>CLICK & <span>EXPLORE</span></h2>
+            <p>Click an HTML element to see what it does!</p>
+        </div>
+
+        <div class="explore-layout">
+
+            <div class="element-menu">
+
+                <h3>HTML ELEMENTS</h3>
+
+                <button class="element-option active" data-element="h1">
+                    <span>&lt;h1&gt;</span> Heading
+                </button>
+
+                <button class="element-option" data-element="p">
+                    <span>&lt;p&gt;</span> Paragraph
+                </button>
+
+                <button class="element-option" data-element="img">
+                    <span>&lt;img&gt;</span> Image
+                </button>
+
+                <button class="element-option" data-element="button">
+                    <span>&lt;button&gt;</span> Button
+                </button>
+
+                <button class="element-option" data-element="a">
+                    <span>&lt;a&gt;</span> Link
+                </button>
+
+                <button class="element-option" data-element="ul">
+                    <span>&lt;ul&gt;</span> List
+                </button>
+
+            </div>
+
+            <div class="element-info">
+
+                <h3 id="elementName">Heading — &lt;h1&gt;</h3>
+
+                <p id="elementDescription">
+                    Headings are used for titles and subtitles.
+                    The h1 element creates the main heading of a page.
+                </p>
+
+                <div class="element-code">
+                    <span>EXAMPLE CODE</span>
+                    <pre id="elementCode">&lt;h1&gt;Hello World!&lt;/h1&gt;</pre>
+                </div>
+
+                <div class="element-result">
+
+                    <span>WHAT IT LOOKS LIKE</span>
+
+                    <div id="elementDemo">
+                        <h1>Hello World!</h1>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- HTML PLAYGROUND -->
+
+    <section class="learning-section">
+
+        <div class="section-title">
+            <span class="tag">PRACTICE AREA</span>
+            <h2>HTML <span>PLAYGROUND</span></h2>
+            <p>Write your own HTML code and run it!</p>
+        </div>
+
+        <div class="playground">
+
+            <div class="editor-area">
+
+                <div class="editor-heading">
+                    <span><i class="fa-solid fa-code"></i> HTML EDITOR</span>
+                    <span class="live-dot">● LIVE LAB</span>
+                </div>
+
+                <textarea id="htmlEditor" spellcheck="false" placeholder="Write your HTML code here...
+
+Example:
+<h1>Hello!</h1>
+<p>My first website.</p>
+<button>Click me</button>"></textarea>
+
+                <div class="editor-buttons">
+
+                    <button id="runHTML" class="action-btn">
+                        <i class="fa-solid fa-play"></i> RUN CODE
+                    </button>
+
+                    <button id="clearHTML" class="clear-btn">
+                        <i class="fa-solid fa-trash"></i> CLEAR
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="browser-area">
+
+                <div class="browser-heading">
+                    <span><i class="fa-solid fa-window-maximize"></i> LIVE PREVIEW</span>
+                    <span class="browser-dots">● ● ●</span>
+                </div>
+
+                <iframe
+                    id="htmlPreview"
+                    title="HTML live preview"
+                    sandbox=""
+                ></iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BUILD YOUR ELEMENT -->
+
+    <section class="learning-section">
+
+        <div class="section-title">
+            <span class="tag">EXPERIMENT</span>
+            <h2>BUILD YOUR <span>ELEMENT</span></h2>
+            <p>Change the text and choose an HTML tag!</p>
+        </div>
+
+        <div class="builder">
+
+            <div class="builder-controls">
+
+                <label for="builderText">YOUR TEXT</label>
+
+                <input
+                    type="text"
+                    id="builderText"
+                    value="Welcome to CODEBLOOM!"
+                    placeholder="Write something..."
+                >
+
+                <label for="builderTag">CHOOSE HTML TAG</label>
+
+                <select id="builderTag">
+                    <option value="h1">Heading H1</option>
+                    <option value="h2">Heading H2</option>
+                    <option value="p">Paragraph</option>
+                    <option value="button">Button</option>
+                </select>
+
+                <label for="builderColor">CHOOSE COLOR</label>
+
+                <input type="color" id="builderColor" value="#A100FF">
+
+            </div>
+
+            <div class="builder-preview">
+
+                <span>YOUR LIVE RESULT</span>
+
+                <div id="builderResult">
+                    <h1>Welcome to CODEBLOOM!</h1>
+                </div>
+
+                <p id="builderCode">
+                    &lt;h1&gt;Welcome to CODEBLOOM!&lt;/h1&gt;
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- QUIZ -->
+
+    <section class="learning-section quiz-section">
+
+        <div class="section-title">
+            <span class="tag">TEST YOURSELF</span>
+            <h2>HTML <span>QUIZ</span></h2>
+            <p>Answer the questions and collect points!</p>
+        </div>
+
+        <div class="quiz-box">
+
+            <div class="quiz-top">
+                <span id="questionNumber">QUESTION 1 / 5</span>
+                <span>SCORE: <b id="quizScore">0</b></span>
+            </div>
+
+            <div class="progress-track">
+                <div id="quizProgress"></div>
+            </div>
+
+            <h3 id="quizQuestion">What does HTML stand for?</h3>
+
+            <div id="quizAnswers" class="quiz-answers"></div>
+
+            <p id="quizMessage"></p>
+
+            <button id="nextQuestion" class="action-btn" disabled>
+                NEXT QUESTION <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- MINI CHALLENGE -->
+
+    <section class="learning-section challenge-section">
+
+        <div class="section-title">
+            <span class="tag">YOUR MISSION</span>
+            <h2>MINI <span>CHALLENGE</span></h2>
+            <p>Let's see if you can write HTML without help!</p>
+        </div>
+
+        <div class="challenge-card">
+
+            <div class="challenge-icon">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+
+            <h3>MISSION 01: CREATE A HEADING</h3>
+
+            <p>
+                Create a heading that says
+                <strong>I LOVE CODING</strong>.
+                Use the correct HTML heading tag.
+            </p>
+
+            <input
+                type="text"
+                id="challengeAnswer"
+                placeholder="Write your HTML code..."
+            >
+
+            <button id="checkChallenge" class="action-btn">
+                CHECK MY ANSWER
+            </button>
+
+            <p id="challengeMessage"></p>
+
+        </div>
+
+    </section>
+
+    <!-- COURSE ENDING -->
+
+    <section class="course-ending">
+
+        <i class="fa-solid fa-rocket"></i>
+
+        <h2>YOU'RE LEARNING TO CODE!</h2>
+
+        <p>
+            Keep practicing, keep experimenting
+            and build something amazing.
+        </p>
+
+        <a href="shop.html" class="buy-btn">BACK TO SHOP</a>
+
+    </section>
 
 </main>
 
 <footer>
     CODE YOUR FUTURE © 2026 | CODEBLOOM
 </footer>
+
+
+<script>
+
+// CLICK AND EXPLORE
+
+const elementData = {
+
+    h1: {
+        name: "Heading — <h1>",
+        description: "Headings are used for titles and subtitles. H1 is the main and most important heading on a page.",
+        code: "<h1>Hello World!</h1>",
+        demo: "<h1>Hello World!</h1>"
+    },
+
+    p: {
+        name: "Paragraph — <p>",
+        description: "The paragraph tag is used to display normal text on a webpage.",
+        code: "<p>This is my first paragraph.</p>",
+        demo: "<p>This is my first paragraph.</p>"
+    },
+
+    img: {
+        name: "Image — <img>",
+        description: "The image tag displays pictures on a webpage. The src attribute tells the browser where the image is located.",
+        code: '<img src="photo.jpg" alt="My photo">',
+        demo: '<img class="sample-photo" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Programming workspace">'
+    },
+
+    button: {
+        name: "Button — <button>",
+        description: "The button tag creates a clickable button. JavaScript can be used to give the button an action.",
+        code: "<button>Click Me!</button>",
+        demo: `<button class="sample-button" onclick="alert('Hello CODEBLOOM!')">Click Me!</button>`
+    },
+
+    a: {
+        name: "Link — <a>",
+        description: "The anchor tag creates a link to another webpage. The href attribute defines the destination.",
+        code: '<a href="https://example.com">Visit Website</a>',
+        demo: '<a href="https://example.com" target="_blank" rel="noopener">Visit Website</a>'
+    },
+
+    ul: {
+        name: "Unordered List — <ul>",
+        description: "The ul tag creates a list with bullet points. Each item is placed inside an li tag.",
+        code: "<ul>\n  <li>HTML</li>\n  <li>CSS</li>\n</ul>",
+        demo: "<ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>"
+    }
+
+};
+
+const elementOptions = document.querySelectorAll(".element-option");
+
+elementOptions.forEach(function(option) {
+
+    option.addEventListener("click", function() {
+
+        elementOptions.forEach(function(item) {
+            item.classList.remove("active");
+        });
+
+        option.classList.add("active");
+
+        const data = elementData[option.dataset.element];
+
+        document.getElementById("elementName").textContent = data.name;
+
+        document.getElementById("elementDescription").textContent = data.description;
+
+        document.getElementById("elementCode").textContent = data.code;
+
+        document.getElementById("elementDemo").innerHTML = data.demo;
+
+    });
+
+});
+
+
+// HTML PLAYGROUND
+
+const htmlEditor = document.getElementById("htmlEditor");
+const htmlPreview = document.getElementById("htmlPreview");
+
+document.getElementById("runHTML").addEventListener("click", function() {
+
+    htmlPreview.srcdoc = htmlEditor.value;
+
+});
+
+document.getElementById("clearHTML").addEventListener("click", function() {
+
+    htmlEditor.value = "";
+    htmlPreview.srcdoc = "";
+
+});
+
+
+// BUILD YOUR ELEMENT
+
+const builderText = document.getElementById("builderText");
+const builderTag = document.getElementById("builderTag");
+const builderColor = document.getElementById("builderColor");
+const builderResult = document.getElementById("builderResult");
+const builderCode = document.getElementById("builderCode");
+
+function updateBuilder() {
+
+    const tag = builderTag.value;
+    const text = builderText.value;
+    const color = builderColor.value;
+
+    const newElement = document.createElement(tag);
+
+    newElement.textContent = text;
+    newElement.style.color = color;
+
+    if (tag === "button") {
+        newElement.classList.add("builder-button");
+    }
+
+    builderResult.innerHTML = "";
+    builderResult.appendChild(newElement);
+
+    builderCode.textContent = `<${tag}>${text}</${tag}>`;
+
+}
+
+builderText.addEventListener("input", updateBuilder);
+builderTag.addEventListener("change", updateBuilder);
+builderColor.addEventListener("input", updateBuilder);
+
+updateBuilder();
+
+
+// HTML QUIZ
+
+const questions = [
+
+    {
+        question: "What does HTML stand for?",
+        answers: [
+            "HyperText Markup Language",
+            "High Tech Modern Language",
+            "Home Tool Markup Language"
+        ],
+        correct: 0
+    },
+
+    {
+        question: "Which tag creates a paragraph?",
+        answers: ["<h1>", "<p>", "<img>"],
+        correct: 1
+    },
+
+    {
+        question: "Which tag creates the main heading?",
+        answers: ["<h1>", "<li>", "<br>"],
+        correct: 0
+    },
+
+    {
+        question: "Which attribute defines an image source?",
+        answers: ["href", "src", "class"],
+        correct: 1
+    },
+
+    {
+        question: "Which tag creates a hyperlink?",
+        answers: ["<a>", "<button>", "<ul>"],
+        correct: 0
+    }
+
+];
+
+let questionIndex = 0;
+let score = 0;
+let hasAnswered = false;
+let quizFinished = false;
+
+const quizQuestion = document.getElementById("quizQuestion");
+const quizAnswers = document.getElementById("quizAnswers");
+const quizMessage = document.getElementById("quizMessage");
+const nextQuestion = document.getElementById("nextQuestion");
+
+function showQuestion() {
+
+    hasAnswered = false;
+
+    const current = questions[questionIndex];
+
+    document.getElementById("questionNumber").textContent =
+        "QUESTION " + (questionIndex + 1) + " / " + questions.length;
+
+    document.getElementById("quizProgress").style.width =
+        ((questionIndex + 1) / questions.length * 100) + "%";
+
+    quizQuestion.textContent = current.question;
+
+    quizAnswers.innerHTML = "";
+
+    quizMessage.textContent = "";
+
+    nextQuestion.disabled = true;
+
+    current.answers.forEach(function(answer, index) {
+
+        const button = document.createElement("button");
+
+        button.className = "quiz-answer";
+        button.textContent = answer;
+
+        button.addEventListener("click", function() {
+            checkAnswer(index, button);
+        });
+
+        quizAnswers.appendChild(button);
+
+    });
+
+}
+
+function checkAnswer(index, selectedButton) {
+
+    if (hasAnswered) return;
+
+    hasAnswered = true;
+
+    const correct = questions[questionIndex].correct;
+
+    const allButtons = document.querySelectorAll(".quiz-answer");
+
+    allButtons.forEach(function(button) {
+        button.disabled = true;
+    });
+
+    if (index === correct) {
+
+        score++;
+
+        selectedButton.classList.add("correct-answer");
+
+        quizMessage.textContent = "Correct! Excellent work!";
+
+    } else {
+
+        selectedButton.classList.add("wrong-answer");
+
+        allButtons[correct].classList.add("correct-answer");
+
+        quizMessage.textContent = "Not quite! The green answer is correct.";
+
+    }
+
+    document.getElementById("quizScore").textContent = score;
+
+    nextQuestion.disabled = false;
+
+}
+
+
+// NEXT QUESTION AND PLAY AGAIN
+
+nextQuestion.addEventListener("click", function() {
+
+    if (quizFinished) {
+
+        questionIndex = 0;
+        score = 0;
+        quizFinished = false;
+
+        document.getElementById("quizScore").textContent = "0";
+
+        nextQuestion.textContent = "NEXT QUESTION";
+
+        showQuestion();
+
+        return;
+
+    }
+
+    questionIndex++;
+
+    if (questionIndex < questions.length) {
+
+        showQuestion();
+
+    } else {
+
+        quizFinished = true;
+
+        quizQuestion.textContent = "QUIZ COMPLETED!";
+
+        quizAnswers.innerHTML = "";
+
+        document.getElementById("questionNumber").textContent = "FINAL RESULT";
+
+        document.getElementById("quizProgress").style.width = "100%";
+
+        quizMessage.textContent =
+            "You scored " + score + " out of " + questions.length + "!";
+
+        nextQuestion.textContent = "PLAY AGAIN";
+
+        nextQuestion.disabled = false;
+
+    }
+
+});
+
+showQuestion();
+
+
+// MINI CHALLENGE
+
+document.getElementById("checkChallenge").addEventListener("click", function() {
+
+    const answer = document.getElementById("challengeAnswer").value.trim();
+
+    const message = document.getElementById("challengeMessage");
+
+    if (/^<h1>\s*I LOVE CODING\s*<\/h1>$/i.test(answer)) {
+
+        message.textContent = "Amazing! Challenge completed!";
+
+        message.className = "success-message";
+
+    } else {
+
+        message.textContent = "Try again! Hint: Use the <h1> tag.";
+
+        message.className = "error-message";
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>

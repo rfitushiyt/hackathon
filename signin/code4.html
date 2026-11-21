@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bundle-course">
 
 <nav class="navbar">
     <a href="index.html" class="logo">CODE<span>BLOOM</span></a>
@@ -20,35 +20,264 @@
 <main class="details-container">
 
     <span class="tag">ULTIMATE COLLECTION</span>
-
     <h1>ULTIMATE <span>CODING BUNDLE</span></h1>
 
     <p class="description">
-        Everything you need to start your coding journey!
-        Get access to HTML, CSS and JavaScript learning materials in one complete package.
+        Combine HTML, CSS and JavaScript to create a complete website.
+        This is your chance to put everything you learned into practice!
     </p>
 
-    <h2>WHAT'S INCLUDED?</h2>
+    <div class="course-stats">
+        <div><strong>03</strong><span>Languages</span></div>
+        <div><strong>01</strong><span>Website Builder</span></div>
+        <div><strong>01</strong><span>Final Project</span></div>
+    </div>
 
-    <ul class="features">
-        <li><i class="fa-solid fa-check"></i> Complete HTML Starter Kit</li>
-        <li><i class="fa-solid fa-check"></i> Complete CSS Design Pack</li>
-        <li><i class="fa-solid fa-check"></i> Complete JavaScript Essentials</li>
-        <li><i class="fa-solid fa-check"></i> 12 beginner-friendly projects</li>
-        <li><i class="fa-solid fa-check"></i> Website design tutorials</li>
-        <li><i class="fa-solid fa-check"></i> Coding exercises and challenges</li>
-        <li><i class="fa-solid fa-check"></i> Complete beginner learning guide</li>
-    </ul>
+    <section class="learning-section">
+        <span class="tag">STEP 01</span>
+        <h2><i class="fa-brands fa-html5"></i> HTML STRUCTURE</h2>
+        <p class="description">HTML creates the structure and content of your website.</p>
 
-    <div class="price">$29.99</div>
+        <div class="lab-panel">
+            <pre class="code-example">&lt;h1&gt;My Website&lt;/h1&gt;
+&lt;p&gt;Welcome to my page!&lt;/p&gt;
+&lt;button&gt;Explore&lt;/button&gt;</pre>
 
-    <a href="shop.html" class="buy-btn">BACK TO SHOP</a>
+            <div class="bundle-demo">
+                <h3>My Website</h3>
+                <p>Welcome to my page!</p>
+                <button type="button">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">STEP 02</span>
+        <h2><i class="fa-brands fa-css3-alt"></i> CSS STYLING</h2>
+        <p class="description">CSS controls how your website looks and feels.</p>
+
+        <div class="lab-panel">
+            <pre class="code-example">h1 {
+    color: #ff2e93;
+    font-size: 32px;
+}
+
+button {
+    background: purple;
+    border-radius: 20px;
+}</pre>
+
+            <div class="bundle-demo css-demo">
+                <h3>Styled Website</h3>
+                <p>Now my website has a design!</p>
+                <button type="button">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">STEP 03</span>
+        <h2><i class="fa-brands fa-js"></i> JAVASCRIPT INTERACTION</h2>
+        <p class="description">JavaScript makes your website respond to user actions.</p>
+
+        <div class="lab-panel">
+            <pre class="code-example">function sayHello() {
+    alert("Welcome!");
+}</pre>
+
+            <div class="bundle-demo">
+                <h3>Interactive Website</h3>
+                <p>Click the button to test JavaScript.</p>
+                <button type="button" id="helloButton">Say Hello</button>
+                <p id="helloResult" class="feedback"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">MAIN PROJECT</span>
+        <h2><i class="fa-solid fa-laptop-code"></i> BUILD YOUR OWN WEBSITE</h2>
+
+        <p class="description">
+            Write HTML, CSS and JavaScript in the editors below.
+            Press RUN WEBSITE to see your project in the preview.
+        </p>
+
+        <div class="lab-panel">
+            <label for="projectHtml">HTML</label>
+            <textarea id="projectHtml" class="project-editor" spellcheck="false"><h1>My First Website</h1>
+<p>I created this using CODEBLOOM!</p>
+<button id="myButton">Click Me</button>
+<p id="message"></p></textarea>
+
+            <label for="projectCss">CSS</label>
+            <textarea id="projectCss" class="project-editor" spellcheck="false">body {
+    background: #170A2B;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    color: #FF2E93;
+}
+
+button {
+    background: #7200FF;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}</textarea>
+
+            <label for="projectJs">JavaScript</label>
+            <textarea id="projectJs" class="project-editor" spellcheck="false">document.getElementById("myButton").addEventListener("click", function() {
+    document.getElementById("message").textContent = "You did it!";
+});</textarea>
+
+            <div class="editor-buttons">
+                <button class="lab-button" id="runProject"><i class="fa-solid fa-play"></i> RUN WEBSITE</button>
+                <button class="lab-button secondary-button" id="resetProject"><i class="fa-solid fa-rotate-left"></i> RESET</button>
+            </div>
+
+            <h3 class="preview-heading">LIVE PREVIEW</h3>
+            <iframe id="projectPreview" class="project-preview" title="Your website preview" sandbox="allow-scripts"></iframe>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">FINAL CHALLENGE</span>
+        <h2><i class="fa-solid fa-trophy"></i> CREATE A PROFILE CARD</h2>
+        <p class="description">
+            Your mission is to create a profile card using HTML, CSS and JavaScript.
+            Start with the template and customize it!
+        </p>
+
+        <div class="lab-panel">
+            <label for="profileName">Profile name</label>
+            <input type="text" id="profileName" value="Code Explorer">
+
+            <label for="profileRole">Your title</label>
+            <input type="text" id="profileRole" value="Future Developer">
+
+            <label for="profileColor">Card color</label>
+            <input type="color" id="profileColor" value="#291044">
+
+            <div class="profile-preview" id="profilePreview">
+                <div class="profile-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                <h3 id="profileNamePreview">Code Explorer</h3>
+                <p id="profileRolePreview">Future Developer</p>
+                <button type="button" id="profileFollow">FOLLOW</button>
+                <p id="profileFollowMessage"></p>
+            </div>
+
+            <button class="lab-button" id="checkProfile">CHECK MY PROJECT</button>
+            <p class="feedback" id="profileResult"></p>
+        </div>
+    </section>
+
+    <div class="course-ending">
+        <h2>YOU ARE A CREATOR!</h2>
+        <p>You have explored HTML, CSS and JavaScript. Now keep building your own ideas!</p>
+        <a href="shop.html" class="buy-btn">BACK TO SHOP</a>
+    </div>
 
 </main>
 
-<footer>
-    CODE YOUR FUTURE © 2026 | CODEBLOOM
-</footer>
+<footer>CODE YOUR FUTURE © 2026 | CODEBLOOM</footer>
+
+<script>
+document.getElementById("helloButton").addEventListener("click", () => {
+    document.getElementById("helloResult").textContent = "Welcome to CODEBLOOM! Keep coding!";
+});
+
+const projectHtml = document.getElementById("projectHtml");
+const projectCss = document.getElementById("projectCss");
+const projectJs = document.getElementById("projectJs");
+const projectPreview = document.getElementById("projectPreview");
+
+function runProject() {
+    const html = projectHtml.value;
+    const css = projectCss.value.replace(/<\/style/gi, "<\\/style");
+    const js = projectJs.value.replace(/<\/script/gi, "<\\/script");
+
+    const page = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>${css}</style>
+</head>
+<body>
+${html}
+<script>
+${js}
+<\/script>
+</body>
+</html>`;
+
+    projectPreview.srcdoc = page;
+}
+
+document.getElementById("runProject").addEventListener("click", runProject);
+
+const originalHtml = projectHtml.value;
+const originalCss = projectCss.value;
+const originalJs = projectJs.value;
+
+document.getElementById("resetProject").addEventListener("click", () => {
+    projectHtml.value = originalHtml;
+    projectCss.value = originalCss;
+    projectJs.value = originalJs;
+    runProject();
+});
+
+runProject();
+
+const profileName = document.getElementById("profileName");
+const profileRole = document.getElementById("profileRole");
+const profileColor = document.getElementById("profileColor");
+const profilePreview = document.getElementById("profilePreview");
+
+function updateProfile() {
+    document.getElementById("profileNamePreview").textContent =
+        profileName.value || "Your Name";
+
+    document.getElementById("profileRolePreview").textContent =
+        profileRole.value || "Your Title";
+
+    profilePreview.style.background = profileColor.value;
+}
+
+[profileName, profileRole, profileColor].forEach(input => {
+    input.addEventListener("input", updateProfile);
+});
+updateProfile();
+
+let isFollowing = false;
+
+document.getElementById("profileFollow").addEventListener("click", () => {
+    isFollowing = !isFollowing;
+    document.getElementById("profileFollow").textContent =
+        isFollowing ? "FOLLOWING" : "FOLLOW";
+
+    document.getElementById("profileFollowMessage").textContent =
+        isFollowing ? "You are now following this profile!" : "You unfollowed this profile.";
+});
+
+document.getElementById("checkProfile").addEventListener("click", () => {
+    const result = document.getElementById("profileResult");
+
+    if (profileName.value.trim() &&
+        profileRole.value.trim() &&
+        profileColor.value.toLowerCase() !== "#000000") {
+        result.textContent = "Amazing! Your profile card is complete. +10 points!";
+    } else {
+        result.textContent = "Add a name, a title and choose a card color to complete the challenge.";
+    }
+});
+</script>
 
 </body>
 </html>

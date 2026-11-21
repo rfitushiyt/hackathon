@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="js-course">
 
 <nav class="navbar">
     <a href="index.html" class="logo">CODE<span>BLOOM</span></a>
@@ -20,34 +20,345 @@
 <main class="details-container">
 
     <span class="tag">JAVASCRIPT COLLECTION</span>
-
     <h1>JAVASCRIPT <span>ESSENTIALS</span></h1>
 
     <p class="description">
         Make your websites interactive!
-        Learn JavaScript fundamentals and discover how to bring your ideas to life.
+        Learn JavaScript by experimenting with real code and creating small projects.
     </p>
 
-    <h2>WHAT'S INCLUDED?</h2>
+    <div class="course-stats">
+        <div><strong>05</strong><span>Interactive Labs</span></div>
+        <div><strong>05</strong><span>Quiz Questions</span></div>
+        <div><strong>01</strong><span>Mini Project</span></div>
+    </div>
 
-    <ul class="features">
-        <li><i class="fa-solid fa-check"></i> JavaScript beginner guide</li>
-        <li><i class="fa-solid fa-check"></i> Variables and data types</li>
-        <li><i class="fa-solid fa-check"></i> Functions and conditions</li>
-        <li><i class="fa-solid fa-check"></i> Loops and arrays</li>
-        <li><i class="fa-solid fa-check"></i> DOM manipulation</li>
-        <li><i class="fa-solid fa-check"></i> 5 interactive JavaScript projects</li>
-    </ul>
+    <section class="learning-section">
+        <span class="tag">LAB 01</span>
+        <h2><i class="fa-solid fa-box"></i> VARIABLES PLAYGROUND</h2>
+        <p class="description">A variable stores information. Change the values and see the result.</p>
 
-    <div class="price">$19.99</div>
+        <div class="lab-panel">
+            <label for="studentName">Your name</label>
+            <input type="text" id="studentName" value="Alex">
 
-    <a href="shop.html" class="buy-btn">BACK TO SHOP</a>
+            <label for="studentAge">Your age</label>
+            <input type="number" id="studentAge" value="15" min="1" max="120">
+
+            <button class="lab-button" id="runVariables">RUN CODE</button>
+
+            <div class="output-box" id="variableOutput">Your result will appear here...</div>
+
+            <pre class="code-example">let name = "Alex";
+let age = 15;
+
+console.log(name);
+console.log(age);</pre>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">LAB 02</span>
+        <h2><i class="fa-solid fa-gears"></i> FUNCTIONS LAB</h2>
+        <p class="description">A function is a reusable block of code that performs a task.</p>
+
+        <div class="lab-panel">
+            <label for="functionName">Enter your name</label>
+            <input type="text" id="functionName" placeholder="Write your name">
+
+            <button class="lab-button" id="runFunction">CALL FUNCTION</button>
+
+            <div class="output-box" id="functionOutput">Waiting for function...</div>
+
+            <pre class="code-example">function welcome(name) {
+    return "Welcome, " + name + "!";
+}
+
+welcome("Alex");</pre>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">LAB 03</span>
+        <h2><i class="fa-solid fa-code-branch"></i> IF / ELSE CHALLENGE</h2>
+        <p class="description">Conditions allow JavaScript to make decisions.</p>
+
+        <div class="lab-panel">
+            <label for="gradeInput">Enter a grade (1–5)</label>
+            <input type="number" id="gradeInput" min="1" max="5" value="4">
+
+            <button class="lab-button" id="checkGrade">CHECK GRADE</button>
+            <div class="output-box" id="gradeOutput">Your result will appear here...</div>
+
+            <pre class="code-example">if (grade >= 3) {
+    console.log("You passed!");
+} else {
+    console.log("Try again!");
+}</pre>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">LAB 04</span>
+        <h2><i class="fa-solid fa-repeat"></i> LOOPS & ARRAYS</h2>
+        <p class="description">Arrays store multiple values. Loops let you repeat an action.</p>
+
+        <div class="lab-panel">
+            <label for="arrayInput">Enter words separated by commas</label>
+            <input type="text" id="arrayInput" value="HTML, CSS, JavaScript">
+
+            <button class="lab-button" id="runArray">RUN LOOP</button>
+            <div class="output-box" id="arrayOutput">Your list will appear here...</div>
+
+            <pre class="code-example">let skills = ["HTML", "CSS", "JavaScript"];
+
+for (let skill of skills) {
+    console.log(skill);
+}</pre>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">LAB 05</span>
+        <h2><i class="fa-solid fa-window-maximize"></i> DOM PLAYGROUND</h2>
+        <p class="description">The DOM lets JavaScript change HTML elements on a page.</p>
+
+        <div class="lab-panel">
+            <label for="domText">Change the text</label>
+            <input type="text" id="domText" value="JavaScript is awesome!">
+
+            <label for="domColor">Choose a color</label>
+            <input type="color" id="domColor" value="#ff2e93">
+
+            <button class="lab-button" id="updateDom">UPDATE ELEMENT</button>
+
+            <div class="dom-preview" id="domPreview">Hello, CODEBLOOM!</div>
+
+            <pre class="code-example">document.getElementById("title").textContent =
+    "JavaScript is awesome!";</pre>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">KNOWLEDGE CHECK</span>
+        <h2><i class="fa-solid fa-brain"></i> JAVASCRIPT QUIZ</h2>
+
+        <div class="lab-panel">
+            <div class="quiz-top">
+                <span id="jsQuestionNumber">Question 1 / 5</span>
+                <span id="jsScore">Score: 0</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="jsProgress" class="progress-fill"></div>
+            </div>
+
+            <h3 id="jsQuestion">What keyword declares a variable?</h3>
+            <div id="jsAnswers" class="answer-list"></div>
+            <p id="jsFeedback" class="feedback"></p>
+            <button id="jsNext" class="lab-button" disabled>NEXT QUESTION</button>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">MINI PROJECT</span>
+        <h2><i class="fa-solid fa-calculator"></i> BUILD A COUNTER</h2>
+        <p class="description">Use JavaScript to make a working counter. Increase, decrease and reset the number.</p>
+
+        <div class="lab-panel counter-panel">
+            <div id="counterNumber">0</div>
+
+            <div class="counter-buttons">
+                <button id="decreaseCounter">−</button>
+                <button id="resetCounter">RESET</button>
+                <button id="increaseCounter">+</button>
+            </div>
+
+            <p class="feedback" id="counterMessage">Try clicking the buttons!</p>
+        </div>
+    </section>
+
+    <div class="course-ending">
+        <h2>YOU DID IT!</h2>
+        <p>You practiced JavaScript fundamentals and built your own interactive counter.</p>
+        <a href="shop.html" class="buy-btn">BACK TO SHOP</a>
+    </div>
 
 </main>
 
-<footer>
-    CODE YOUR FUTURE © 2026 | CODEBLOOM
-</footer>
+<footer>CODE YOUR FUTURE © 2026 | CODEBLOOM</footer>
+
+<script>
+document.getElementById("runVariables").addEventListener("click", () => {
+    const name = document.getElementById("studentName").value.trim();
+    const age = Number(document.getElementById("studentAge").value);
+    const output = document.getElementById("variableOutput");
+
+    if (!name || !age || age < 1 || age > 120) {
+        output.textContent = "Please enter a valid name and age.";
+        return;
+    }
+
+    output.textContent = `Hello ${name}! You are ${age} years old.`;
+});
+
+document.getElementById("runFunction").addEventListener("click", () => {
+    const name = document.getElementById("functionName").value.trim();
+    const output = document.getElementById("functionOutput");
+
+    function welcome(person) {
+        return "Welcome to CODEBLOOM, " + person + "!";
+    }
+
+    output.textContent = name ? welcome(name) : "Please enter your name first.";
+});
+
+document.getElementById("checkGrade").addEventListener("click", () => {
+    const grade = Number(document.getElementById("gradeInput").value);
+    const output = document.getElementById("gradeOutput");
+
+    if (!Number.isInteger(grade) || grade < 1 || grade > 5) {
+        output.textContent = "Enter a grade between 1 and 5.";
+    } else if (grade >= 3) {
+        output.textContent = "You passed! Great work!";
+    } else {
+        output.textContent = "Keep practicing. You can do it!";
+    }
+});
+
+document.getElementById("runArray").addEventListener("click", () => {
+    const words = document.getElementById("arrayInput").value
+        .split(",")
+        .map(word => word.trim())
+        .filter(word => word !== "");
+
+    const output = document.getElementById("arrayOutput");
+    output.innerHTML = "";
+
+    if (words.length === 0) {
+        output.textContent = "Enter at least one word.";
+        return;
+    }
+
+    words.forEach((word, index) => {
+        const line = document.createElement("p");
+        line.textContent = `${index + 1}. ${word}`;
+        output.appendChild(line);
+    });
+});
+
+document.getElementById("updateDom").addEventListener("click", () => {
+    const text = document.getElementById("domText").value;
+    const color = document.getElementById("domColor").value;
+    const preview = document.getElementById("domPreview");
+
+    preview.textContent = text || "Write something first!";
+    preview.style.color = color;
+});
+
+const jsQuestions = [
+    {q:"Which keyword can declare a variable?",a:["let","style","html"],c:0},
+    {q:"Which symbol is used for a single-line comment?",a:["<!-- -->","//","**"],c:1},
+    {q:"What does a function do?",a:["Stores images","Repeats CSS","Performs a reusable task"],c:2},
+    {q:"Which method selects an element by its ID?",a:["getElementById()","getColor()","selectClass()"],c:0},
+    {q:"Which loop can repeat through an array?",a:["if","for","switch"],c:1}
+];
+
+let jsIndex = 0;
+let jsPoints = 0;
+let jsAnswered = false;
+
+function showJsQuestion() {
+    jsAnswered = false;
+    const q = jsQuestions[jsIndex];
+
+    document.getElementById("jsQuestionNumber").textContent = `Question ${jsIndex + 1} / 5`;
+    document.getElementById("jsScore").textContent = `Score: ${jsPoints}`;
+    document.getElementById("jsQuestion").textContent = q.q;
+    document.getElementById("jsProgress").style.width = (jsIndex / 5 * 100) + "%";
+    document.getElementById("jsFeedback").textContent = "";
+    document.getElementById("jsNext").disabled = true;
+    document.getElementById("jsNext").textContent = jsIndex === 4 ? "SEE RESULT" : "NEXT QUESTION";
+
+    const answers = document.getElementById("jsAnswers");
+    answers.innerHTML = "";
+
+    q.a.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.className = "answer-option";
+        button.textContent = answer;
+        button.addEventListener("click", () => chooseJsAnswer(index, button));
+        answers.appendChild(button);
+    });
+}
+
+function chooseJsAnswer(index, selectedButton) {
+    if (jsAnswered) return;
+    jsAnswered = true;
+
+    const correct = jsQuestions[jsIndex].c;
+    const buttons = document.querySelectorAll("#jsAnswers button");
+
+    buttons.forEach((button, i) => {
+        button.disabled = true;
+        if (i === correct) button.classList.add("correct");
+    });
+
+    if (index === correct) {
+        jsPoints++;
+        document.getElementById("jsFeedback").textContent = "Correct answer! +1 point";
+    } else {
+        selectedButton.classList.add("wrong");
+        document.getElementById("jsFeedback").textContent = "Not quite! The correct answer is highlighted.";
+    }
+
+    document.getElementById("jsScore").textContent = `Score: ${jsPoints}`;
+    document.getElementById("jsNext").disabled = false;
+}
+
+document.getElementById("jsNext").addEventListener("click", () => {
+    if (jsIndex < 4) {
+        jsIndex++;
+        showJsQuestion();
+    } else {
+        document.getElementById("jsQuestion").textContent = `You scored ${jsPoints} out of 5!`;
+        document.getElementById("jsAnswers").innerHTML = "";
+        document.getElementById("jsFeedback").textContent = "Great work! You can play again to improve your score.";
+        document.getElementById("jsProgress").style.width = "100%";
+        document.getElementById("jsNext").textContent = "PLAY AGAIN";
+        document.getElementById("jsNext").onclick = () => {
+            jsIndex = 0;
+            jsPoints = 0;
+            showJsQuestion();
+            document.getElementById("jsNext").onclick = null;
+        };
+    }
+});
+showJsQuestion();
+
+let counter = 0;
+const counterNumber = document.getElementById("counterNumber");
+
+function updateCounter(message) {
+    counterNumber.textContent = counter;
+    document.getElementById("counterMessage").textContent = message;
+}
+
+document.getElementById("increaseCounter").addEventListener("click", () => {
+    counter++;
+    updateCounter("Number increased!");
+});
+
+document.getElementById("decreaseCounter").addEventListener("click", () => {
+    counter--;
+    updateCounter("Number decreased!");
+});
+
+document.getElementById("resetCounter").addEventListener("click", () => {
+    counter = 0;
+    updateCounter("Counter reset!");
+});
+</script>
 
 </body>
 </html>

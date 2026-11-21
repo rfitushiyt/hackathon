@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="css-course">
 
 <nav class="navbar">
     <a href="index.html" class="logo">CODE<span>BLOOM</span></a>
@@ -20,34 +20,383 @@
 <main class="details-container">
 
     <span class="tag">CSS COLLECTION</span>
-
     <h1>CSS <span>DESIGN PACK</span></h1>
 
     <p class="description">
-        Give your websites a professional look.
-        Explore colors, layouts, animations and modern CSS design techniques.
+        Learn how to transform simple HTML into beautiful websites.
+        Experiment with colors, fonts, layouts, buttons and animations!
     </p>
 
-    <h2>WHAT'S INCLUDED?</h2>
+    <div class="course-stats">
+        <div><strong>05</strong><span>Interactive Labs</span></div>
+        <div><strong>05</strong><span>Quiz Questions</span></div>
+        <div><strong>01</strong><span>Final Challenge</span></div>
+    </div>
 
-    <ul class="features">
-        <li><i class="fa-solid fa-check"></i> CSS beginner guide</li>
-        <li><i class="fa-solid fa-check"></i> Colors and typography guide</li>
-        <li><i class="fa-solid fa-check"></i> Flexbox and Grid tutorials</li>
-        <li><i class="fa-solid fa-check"></i> Buttons and hover effects</li>
-        <li><i class="fa-solid fa-check"></i> CSS animations and transitions</li>
-        <li><i class="fa-solid fa-check"></i> 4 website design projects</li>
-    </ul>
+    <section class="learning-section">
+        <span class="tag">LAB 01</span>
+        <h2><i class="fa-solid fa-palette"></i> COLOR PLAYGROUND</h2>
+        <p class="description">Choose colors and watch your design change instantly.</p>
 
-    <div class="price">$14.99</div>
+        <div class="lab-panel">
+            <div class="control-group">
+                <label>Background color</label>
+                <input type="color" id="bgColor" value="#291044">
+            </div>
+            <div class="control-group">
+                <label>Text color</label>
+                <input type="color" id="textColor" value="#ffffff">
+            </div>
+            <div class="control-group">
+                <label>Accent color</label>
+                <input type="color" id="accentColor" value="#ff2e93">
+            </div>
 
-    <a href="shop.html" class="buy-btn">BACK TO SHOP</a>
+            <div class="css-preview" id="colorPreview">
+                <h3 id="colorTitle">My First Design</h3>
+                <p>Change my colors using the controls!</p>
+                <button type="button">Explore</button>
+            </div>
+            <button class="lab-button" onclick="resetColors()">RESET COLORS</button>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">LAB 02</span>
+        <h2><i class="fa-solid fa-font"></i> TYPOGRAPHY LAB</h2>
+        <p class="description">Experiment with font size, weight and letter spacing.</p>
+
+        <div class="lab-panel">
+            <label for="fontSize">Font size: <span id="fontSizeValue">28</span>px</label>
+            <input type="range" id="fontSize" min="14" max="55" value="28">
+
+            <label for="fontWeight">Font weight</label>
+            <select id="fontWeight">
+                <option value="300">Light</option>
+                <option value="400">Regular</option>
+                <option value="600" selected>Semibold</option>
+                <option value="800">Extra Bold</option>
+            </select>
+
+            <label for="letterSpacing">Letter spacing: <span id="spacingValue">1</span>px</label>
+            <input type="range" id="letterSpacing" min="0" max="10" value="1">
+
+            <div class="css-preview">
+                <h3 id="typePreview">CODE YOUR FUTURE</h3>
+                <p>Good typography makes a website easier to read.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">LAB 03</span>
+        <h2><i class="fa-solid fa-layer-group"></i> FLEXBOX & GRID LAB</h2>
+        <p class="description">Change the layout and see how CSS positions elements.</p>
+
+        <div class="lab-panel">
+            <label for="layoutMode">Choose a layout</label>
+            <select id="layoutMode">
+                <option value="flex">Flexbox</option>
+                <option value="grid">Grid</option>
+            </select>
+
+            <label for="layoutDirection">Flex direction</label>
+            <select id="layoutDirection">
+                <option value="row">Row</option>
+                <option value="column">Column</option>
+            </select>
+
+            <label for="layoutGap">Gap: <span id="gapValue">12</span>px</label>
+            <input type="range" id="layoutGap" min="0" max="35" value="12">
+
+            <div class="layout-preview" id="layoutPreview">
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JS</div>
+                <div>CODE</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">LAB 04</span>
+        <h2><i class="fa-solid fa-wand-magic-sparkles"></i> BUTTON DESIGNER</h2>
+        <p class="description">Create your own button by changing its style.</p>
+
+        <div class="lab-panel">
+            <label for="buttonColor">Button color</label>
+            <input type="color" id="buttonColor" value="#a100ff">
+
+            <label for="buttonRadius">Border radius: <span id="radiusValue">20</span>px</label>
+            <input type="range" id="buttonRadius" min="0" max="50" value="20">
+
+            <label for="buttonText">Button text</label>
+            <input type="text" id="buttonText" value="Click Me!" maxlength="25">
+
+            <div class="css-preview">
+                <button id="customButton" class="custom-css-button">Click Me!</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">LAB 05</span>
+        <h2><i class="fa-solid fa-film"></i> ANIMATION LAB</h2>
+        <p class="description">Learn how CSS animations can bring elements to life.</p>
+
+        <div class="lab-panel">
+            <label for="animationMode">Choose an animation</label>
+            <select id="animationMode">
+                <option value="bounce">Bounce</option>
+                <option value="spin">Spin</option>
+                <option value="pulse">Pulse</option>
+                <option value="none">No animation</option>
+            </select>
+
+            <div class="animation-stage">
+                <div id="animatedBox">CSS</div>
+            </div>
+
+            <button class="lab-button" onclick="replayAnimation()">PLAY AGAIN</button>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">KNOWLEDGE CHECK</span>
+        <h2><i class="fa-solid fa-brain"></i> CSS QUIZ</h2>
+
+        <div class="lab-panel">
+            <div class="quiz-top">
+                <span id="cssQuestionNumber">Question 1 / 5</span>
+                <span id="cssScore">Score: 0</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="cssProgress" class="progress-fill"></div>
+            </div>
+
+            <h3 id="cssQuestion">What does CSS stand for?</h3>
+            <div id="cssAnswers" class="answer-list"></div>
+            <p id="cssFeedback" class="feedback"></p>
+            <button id="cssNext" class="lab-button" disabled> NEXT QUESTION </button>
+        </div>
+    </section>
+
+    <section class="learning-section">
+        <span class="tag">FINAL CHALLENGE</span>
+        <h2><i class="fa-solid fa-trophy"></i> DESIGN A CARD</h2>
+        <p class="description">Your task: create a card with a purple background, white text and rounded corners.</p>
+
+        <div class="lab-panel">
+            <label for="challengeBg">Card background</label>
+            <input type="color" id="challengeBg" value="#291044">
+
+            <label for="challengeText">Card text color</label>
+            <input type="color" id="challengeText" value="#ffffff">
+
+            <label for="challengeRadius">Border radius: <span id="challengeRadiusValue">20</span>px</label>
+            <input type="range" id="challengeRadius" min="0" max="50" value="20">
+
+            <div id="challengeCard" class="challenge-card">
+                <h3>MY FIRST CSS CARD</h3>
+                <p>I am learning to design with CSS!</p>
+            </div>
+
+            <button class="lab-button" id="checkCssChallenge">CHECK MY DESIGN</button>
+            <p id="cssChallengeResult" class="feedback"></p>
+        </div>
+    </section>
+
+    <div class="course-ending">
+        <h2>GREAT WORK!</h2>
+        <p>You explored colors, typography, layouts and animations. Keep experimenting!</p>
+        <a href="shop.html" class="buy-btn">BACK TO SHOP</a>
+    </div>
 
 </main>
 
-<footer>
-    CODE YOUR FUTURE © 2026 | CODEBLOOM
-</footer>
+<footer>CODE YOUR FUTURE © 2026 | CODEBLOOM</footer>
+
+<script>
+const bgColor = document.getElementById("bgColor");
+const textColor = document.getElementById("textColor");
+const accentColor = document.getElementById("accentColor");
+const colorPreview = document.getElementById("colorPreview");
+
+function updateColors() {
+    colorPreview.style.background = bgColor.value;
+    colorPreview.style.color = textColor.value;
+    colorPreview.querySelector("button").style.background = accentColor.value;
+}
+[bgColor, textColor, accentColor].forEach(input => input.addEventListener("input", updateColors));
+
+function resetColors() {
+    bgColor.value = "#291044";
+    textColor.value = "#ffffff";
+    accentColor.value = "#ff2e93";
+    updateColors();
+}
+updateColors();
+
+const fontSize = document.getElementById("fontSize");
+const fontWeight = document.getElementById("fontWeight");
+const letterSpacing = document.getElementById("letterSpacing");
+const typePreview = document.getElementById("typePreview");
+
+function updateTypography() {
+    typePreview.style.fontSize = fontSize.value + "px";
+    typePreview.style.fontWeight = fontWeight.value;
+    typePreview.style.letterSpacing = letterSpacing.value + "px";
+    document.getElementById("fontSizeValue").textContent = fontSize.value;
+    document.getElementById("spacingValue").textContent = letterSpacing.value;
+}
+[fontSize, fontWeight, letterSpacing].forEach(input => input.addEventListener("input", updateTypography));
+updateTypography();
+
+const layoutMode = document.getElementById("layoutMode");
+const layoutDirection = document.getElementById("layoutDirection");
+const layoutGap = document.getElementById("layoutGap");
+const layoutPreview = document.getElementById("layoutPreview");
+
+function updateLayout() {
+    layoutPreview.style.display = layoutMode.value;
+    layoutPreview.style.flexDirection = layoutDirection.value;
+    layoutPreview.style.gridTemplateColumns = layoutDirection.value === "row"
+        ? "repeat(4, 1fr)" : "1fr";
+    layoutPreview.style.gap = layoutGap.value + "px";
+    document.getElementById("gapValue").textContent = layoutGap.value;
+}
+[layoutMode, layoutDirection, layoutGap].forEach(input => input.addEventListener("input", updateLayout));
+updateLayout();
+
+const buttonColor = document.getElementById("buttonColor");
+const buttonRadius = document.getElementById("buttonRadius");
+const buttonText = document.getElementById("buttonText");
+const customButton = document.getElementById("customButton");
+
+function updateButton() {
+    customButton.style.background = buttonColor.value;
+    customButton.style.borderRadius = buttonRadius.value + "px";
+    customButton.textContent = buttonText.value || "My Button";
+    document.getElementById("radiusValue").textContent = buttonRadius.value;
+}
+[buttonColor, buttonRadius, buttonText].forEach(input => input.addEventListener("input", updateButton));
+updateButton();
+
+const animationMode = document.getElementById("animationMode");
+const animatedBox = document.getElementById("animatedBox");
+
+function replayAnimation() {
+    animatedBox.style.animation = "none";
+    void animatedBox.offsetWidth;
+    animatedBox.style.animation = animationMode.value + " 1.5s ease";
+}
+animationMode.addEventListener("change", replayAnimation);
+replayAnimation();
+
+const cssQuestions = [
+    {q:"What does CSS stand for?",a:["Computer Style Sheets","Cascading Style Sheets","Creative Style System"],c:1},
+    {q:"Which property changes text color?",a:["font-color","text-style","color"],c:2},
+    {q:"Which property creates space inside an element?",a:["padding","margin","gap"],c:0},
+    {q:"Which value activates Flexbox?",a:["display: block","display: flex","position: flex"],c:1},
+    {q:"Which property rounds corners?",a:["border-radius","corner-style","round"],c:0}
+];
+
+let cssIndex = 0;
+let cssPoints = 0;
+let cssAnswered = false;
+
+function showCssQuestion() {
+    cssAnswered = false;
+    const q = cssQuestions[cssIndex];
+    document.getElementById("cssQuestionNumber").textContent = `Question ${cssIndex + 1} / 5`;
+    document.getElementById("cssScore").textContent = `Score: ${cssPoints}`;
+    document.getElementById("cssQuestion").textContent = q.q;
+    document.getElementById("cssProgress").style.width = (cssIndex / 5 * 100) + "%";
+    document.getElementById("cssFeedback").textContent = "";
+    document.getElementById("cssNext").disabled = true;
+    document.getElementById("cssNext").textContent = cssIndex === 4 ? "SEE RESULT" : "NEXT QUESTION";
+
+    const answers = document.getElementById("cssAnswers");
+    answers.innerHTML = "";
+
+    q.a.forEach((answer, index) => {
+        const button = document.createElement("button");
+        button.className = "answer-option";
+        button.textContent = answer;
+        button.addEventListener("click", () => chooseCssAnswer(index, button));
+        answers.appendChild(button);
+    });
+}
+
+function chooseCssAnswer(index, button) {
+    if (cssAnswered) return;
+    cssAnswered = true;
+
+    const correct = cssQuestions[cssIndex].c;
+    const buttons = document.querySelectorAll("#cssAnswers button");
+    buttons.forEach((item, i) => {
+        item.disabled = true;
+        if (i === correct) item.classList.add("correct");
+    });
+
+    if (index === correct) {
+        cssPoints++;
+        document.getElementById("cssFeedback").textContent = "Correct! +1 point";
+    } else {
+        button.classList.add("wrong");
+        document.getElementById("cssFeedback").textContent = "Not quite! The correct answer is highlighted.";
+    }
+
+    document.getElementById("cssScore").textContent = `Score: ${cssPoints}`;
+    document.getElementById("cssNext").disabled = false;
+}
+
+document.getElementById("cssNext").addEventListener("click", () => {
+    if (cssIndex < 4) {
+        cssIndex++;
+        showCssQuestion();
+    } else {
+        document.getElementById("cssQuestion").textContent = `You scored ${cssPoints} out of 5!`;
+        document.getElementById("cssAnswers").innerHTML = "";
+        document.getElementById("cssFeedback").textContent = "Great job! Try again to improve your score.";
+        document.getElementById("cssProgress").style.width = "100%";
+        document.getElementById("cssNext").textContent = "PLAY AGAIN";
+        document.getElementById("cssNext").onclick = () => {
+            cssIndex = 0;
+            cssPoints = 0;
+            showCssQuestion();
+            document.getElementById("cssNext").onclick = null;
+        };
+    }
+});
+showCssQuestion();
+
+const challengeBg = document.getElementById("challengeBg");
+const challengeText = document.getElementById("challengeText");
+const challengeRadius = document.getElementById("challengeRadius");
+const challengeCard = document.getElementById("challengeCard");
+
+function updateChallengeCard() {
+    challengeCard.style.background = challengeBg.value;
+    challengeCard.style.color = challengeText.value;
+    challengeCard.style.borderRadius = challengeRadius.value + "px";
+    document.getElementById("challengeRadiusValue").textContent = challengeRadius.value;
+}
+[challengeBg, challengeText, challengeRadius].forEach(input => input.addEventListener("input", updateChallengeCard));
+updateChallengeCard();
+
+document.getElementById("checkCssChallenge").addEventListener("click", () => {
+    const result = document.getElementById("cssChallengeResult");
+    if (challengeBg.value.toLowerCase() === "#291044" &&
+        challengeText.value.toLowerCase() === "#ffffff" &&
+        Number(challengeRadius.value) >= 15) {
+        result.textContent = "Challenge completed! You earned 10 points!";
+    } else {
+        result.textContent = "Keep trying! Use purple, white text and rounded corners.";
+    }
+});
+</script>
 
 </body>
 </html>

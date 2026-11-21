@@ -492,3 +492,76 @@ bug.addEventListener("click", function() {
     moveBug();
 
 });
+
+
+/* =====================================
+   GAME FOCUS MODE
+===================================== */
+
+const allGameCards = document.querySelectorAll(".game-card");
+const gamesContainer = document.querySelector(".games-container");
+
+allGameCards.forEach(function(card) {
+
+    // Create OPEN GAME button
+    const openButton = document.createElement("button");
+
+    openButton.textContent = "OPEN GAME";
+    openButton.className = "open-game-btn";
+
+    card.appendChild(openButton);
+
+    openButton.addEventListener("click", function() {
+
+        // Hide all other games
+        allGameCards.forEach(function(otherCard) {
+
+            otherCard.classList.remove("focused");
+            otherCard.classList.add("hidden-game");
+
+        });
+
+        // Show selected game
+        card.classList.remove("hidden-game");
+        card.classList.add("focused");
+
+        // Activate focus mode
+        gamesContainer.classList.add("game-focus");
+        document.body.classList.add("game-mode");
+
+        // Create BACK button
+        const backButton = document.createElement("button");
+
+        backButton.textContent = "← BACK TO ALL GAMES";
+        backButton.className = "back-games-btn";
+
+        card.insertBefore(backButton, card.firstChild);
+
+        backButton.addEventListener("click", function() {
+
+            // Show all games again
+            allGameCards.forEach(function(game) {
+
+                game.classList.remove("focused");
+                game.classList.remove("hidden-game");
+
+            });
+
+            // Remove focus mode
+            gamesContainer.classList.remove("game-focus");
+            document.body.classList.remove("game-mode");
+
+            // Remove back button
+            backButton.remove();
+
+        });
+
+        // Move to selected game
+        card.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    });
+
+});
