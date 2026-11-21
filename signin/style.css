@@ -1047,3 +1047,17 @@ footer {
         height: 190px;
     }
 }
+
+#successMessage {
+    display: none;
+    margin-top: 18px;
+    padding: 14px;
+    text-align: center;
+    color: #00ff99;
+    font-size: 13px;
+    font-weight: 600;
+    background: #00ff9915;
+    border: 1px solid #00ff9950;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ff9920;
+}
