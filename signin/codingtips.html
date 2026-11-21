@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Coding Tips | CODEBLOOM</title>
+
+    <link rel="stylesheet" href="codingtips.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.php" class="logo">CODE<span>BLOOM</span></a>
+
+        <div class="nav-links">
+            <a href="index.html">Register</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Our Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="games.html">Mini Games</a>
+            <a href="code-lab.html">Code Lab</a>
+            <a href="coding-quiz.html">Coding Quiz</a>
+            <a href="codingtips.html" class="active">Coding Tips</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-tag">
+            <i class="fa-solid fa-code"></i> YOUR CODING TOOLKIT
+        </div>
+
+        <h1>CODING <span>TIPS</span></h1>
+
+        <p>
+            Your everyday collection of ready-to-use code snippets.
+            Copy, paste, customize and create!
+        </p>
+
+        <a href="#tips" class="hero-btn">
+            EXPLORE SNIPPETS <i class="fa-solid fa-arrow-down"></i>
+        </a>
+    </header>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput"
+                placeholder="Search for a code snippet...">
+        </div>
+    </section>
+
+    <!-- CODING TIPS -->
+    <main class="tips-container" id="tips">
+
+        <div class="section-heading">
+            <span>THE ESSENTIALS</span>
+            <h2>READY TO <span>USE CODE</span></h2>
+            <p>Everything you need to start building your next project.</p>
+        </div>
+
+        <!-- HTML -->
+        <h2 class="category-title">
+            <i class="fa-brands fa-html5"></i> HTML SNIPPETS
+        </h2>
+
+        <div class="tips-grid">
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language html">HTML</span>
+                    <span class="tip-number">01</span>
+                </div>
+
+                <h3>Basic HTML Structure</h3>
+                <p>The starting structure of almost every HTML page.</p>
+
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport"
+    content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language html">HTML</span>
+                    <span class="tip-number">02</span>
+                </div>
+
+                <h3>Connect HTML with CSS</h3>
+                <p>Add this inside the HTML head to connect your stylesheet.</p>
+
+                <pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet"
+    href="style.css"&gt;
+&lt;/head&gt;</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language html">HTML</span>
+                    <span class="tip-number">03</span>
+                </div>
+
+                <h3>Connect HTML with JavaScript</h3>
+                <p>Connect your JavaScript file before closing body.</p>
+
+                <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language html">HTML</span>
+                    <span class="tip-number">04</span>
+                </div>
+
+                <h3>Create a Navigation Link</h3>
+                <p>Use anchor tags to connect different pages.</p>
+
+                <pre><code>&lt;nav&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;a href="about.html"&gt;About&lt;/a&gt;
+    &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language html">HTML</span>
+                    <span class="tip-number">05</span>
+                </div>
+
+                <h3>Insert an Image</h3>
+                <p>Display an image from your project folder.</p>
+
+                <pre><code>&lt;img src="images/photo.jpg"
+     alt="Description of image"
+     width="300"&gt;</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language html">HTML</span>
+                    <span class="tip-number">06</span>
+                </div>
+
+                <h3>Create a Form</h3>
+                <p>A simple form with name, email and submit button.</p>
+
+                <pre><code>&lt;form&gt;
+    &lt;input type="text"
+    placeholder="Your name"&gt;
+
+    &lt;input type="email"
+    placeholder="Your email"&gt;
+
+    &lt;button type="submit"&gt;
+        Submit
+    &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+        </div>
+
+        <!-- CSS -->
+        <h2 class="category-title">
+            <i class="fa-brands fa-css3-alt"></i> CSS SNIPPETS
+        </h2>
+
+        <div class="tips-grid">
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language css">CSS</span>
+                    <span class="tip-number">07</span>
+                </div>
+
+                <h3>Basic CSS Reset</h3>
+                <p>Remove default spacing from HTML elements.</p>
+
+                <pre><code>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language css">CSS</span>
+                    <span class="tip-number">08</span>
+                </div>
+
+                <h3>Connect Google Fonts</h3>
+                <p>Import a Google Font into your CSS file.</p>
+
+                <pre><code>@import url(
+'https://fonts.googleapis.com/css2?family=Poppins&display=swap'
+);
+
+body {
+    font-family: 'Poppins', sans-serif;
+}</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language css">CSS</span>
+                    <span class="tip-number">09</span>
+                </div>
+
+                <h3>Center an Element</h3>
+                <p>Center content horizontally and vertically.</p>
+
+                <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language css">CSS</span>
+                    <span class="tip-number">10</span>
+                </div>
+
+                <h3>Hover Effect</h3>
+                <p>Change a button when the user moves over it.</p>
+
+                <pre><code>button {
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language css">CSS</span>
+                    <span class="tip-number">11</span>
+                </div>
+
+                <h3>Gradient Background</h3>
+                <p>Create a colorful gradient background.</p>
+
+                <pre><code>body {
+    background: linear-gradient(
+        135deg,
+        #170A2B,
+        #7200FF,
+        #FF2E93
+    );
+}</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language css">CSS</span>
+                    <span class="tip-number">12</span>
+                </div>
+
+                <h3>Responsive Website</h3>
+                <p>Adjust your design for smaller screens.</p>
+
+                <pre><code>@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+        </div>
+
+        <!-- JAVASCRIPT -->
+        <h2 class="category-title">
+            <i class="fa-brands fa-js"></i> JAVASCRIPT SNIPPETS
+        </h2>
+
+        <div class="tips-grid">
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language js">JAVASCRIPT</span>
+                    <span class="tip-number">13</span>
+                </div>
+
+                <h3>Display an Alert</h3>
+                <p>Show a popup message in the browser.</p>
+
+                <pre><code>alert("Welcome to my website!");</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language js">JAVASCRIPT</span>
+                    <span class="tip-number">14</span>
+                </div>
+
+                <h3>Get an HTML Element</h3>
+                <p>Select an element using its ID.</p>
+
+                <pre><code>const title =
+document.getElementById("title");</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language js">JAVASCRIPT</span>
+                    <span class="tip-number">15</span>
+                </div>
+
+                <h3>Change Text with JavaScript</h3>
+                <p>Change the content of an HTML element.</p>
+
+                <pre><code>document.getElementById("title")
+.textContent = "Hello World!";</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language js">JAVASCRIPT</span>
+                    <span class="tip-number">16</span>
+                </div>
+
+                <h3>Click Event</h3>
+                <p>Run a function when a button is clicked.</p>
+
+                <pre><code>const button =
+document.getElementById("myButton");
+
+button.addEventListener("click", function() {
+    alert("Button clicked!");
+});</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language js">JAVASCRIPT</span>
+                    <span class="tip-number">17</span>
+                </div>
+
+                <h3>Simple Function</h3>
+                <p>Create a function that you can reuse.</p>
+
+                <pre><code>function sayHello() {
+    alert("Hello!");
+}
+
+sayHello();</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language js">JAVASCRIPT</span>
+                    <span class="tip-number">18</span>
+                </div>
+
+                <h3>Change Background Color</h3>
+                <p>Change the page background using JavaScript.</p>
+
+                <pre><code>document.body.style.backgroundColor
+= "#7200FF";</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+        </div>
+
+        <!-- PHP -->
+        <h2 class="category-title">
+            <i class="fa-brands fa-php"></i> PHP SNIPPETS
+        </h2>
+
+        <div class="tips-grid">
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language php">PHP</span>
+                    <span class="tip-number">19</span>
+                </div>
+
+                <h3>Basic PHP Structure</h3>
+                <p>The starting structure of a PHP file.</p>
+
+                <pre><code>&lt;?php
+
+echo "Hello World!";
+
+?&gt;</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+            <article class="tip-card">
+                <div class="card-top">
+                    <span class="language php">PHP</span>
+                    <span class="tip-number">20</span>
+                </div>
+
+                <h3>Connect to MySQL</h3>
+                <p>A basic connection using PDO.</p>
+
+                <pre><code>&lt;?php
+
+$conn = new PDO(
+    "mysql:host=localhost;dbname=my_database",
+    "root",
+    ""
+);
+
+?&gt;</code></pre>
+
+                <button class="copy-btn">
+                    <i class="fa-regular fa-copy"></i> COPY CODE
+                </button>
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>CODE<span>BLOOM</span></h2>
+        <p>BUILD. CODE. INNOVATE.</p>
+        <p class="copyright">HTML • CSS • JAVASCRIPT • PHP</p>
+        <p class="copyright">© 2026 CODEBLOOM. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        // COPY CODE BUTTONS
+        const copyButtons = document.querySelectorAll(".copy-btn");
+
+        copyButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const code = this.parentElement.querySelector("code").innerText;
+
+                navigator.clipboard.writeText(code).then(() => {
+                    this.innerHTML = '<i class="fa-solid fa-check"></i> COPIED!';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = '<i class="fa-regular fa-copy"></i> COPY CODE';
+                    }, 1500);
+                }).catch(() => {
+                    alert("Could not copy the code. Please copy it manually.");
+                });
+            });
+        });
+
+        // SEARCH SNIPPETS
+        const searchInput = document.getElementById("searchInput");
+        const cards = document.querySelectorAll(".tip-card");
+
+        searchInput.addEventListener("input", function() {
+            const searchValue = this.value.toLowerCase();
+
+            cards.forEach(card => {
+                const cardText = card.innerText.toLowerCase();
+
+                card.style.display =
+                    cardText.includes(searchValue) ? "block" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>
