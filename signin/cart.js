@@ -208,7 +208,7 @@ checkoutButton.addEventListener("click", function() {
 
         alert("Your demo order was completed successfully!");
 
-        window.location.href = "home.html";
+       window.location.href = "home.html";
     }
 });
 

@@ -52,12 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
                    ★ Our Shop
                 </a>
 
-                ${currentPage === "shop.html" ? `
-                    <a href="cart.html" class="cart-nav-link">
-                        🛒 Cart <span id="cart-count">0</span>
-                    </a>
-                ` : ""}
-
                 <a href="contact.html"
                    class="${currentPage === "contact.html" ? "active" : ""}">
                    ✉ Contact
@@ -92,39 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
         </header>
     `;
 
-
     // PREVENT DUPLICATE NAVBAR
     if (!document.querySelector(".navbar")) {
         document.body.insertAdjacentHTML(
             "afterbegin",
             navbarHTML
         );
-    }
-
-
-    // UPDATE CART COUNT (ONLY ON SHOP PAGE)
-    if (currentPage === "shop.html") {
-
-        const countElement = document.getElementById("cart-count");
-
-        let cart = [];
-
-        try {
-            cart = JSON.parse(
-                localStorage.getItem("codebloomCart")
-            ) || [];
-        } catch (error) {
-            cart = [];
-        }
-
-        const totalItems = cart.reduce(function (total, product) {
-            return total + Number(product.quantity || 0);
-        }, 0);
-
-        if (countElement) {
-            countElement.textContent = totalItems;
-        }
-
     }
 
 });
