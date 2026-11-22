@@ -67,14 +67,14 @@ function displayCart() {
         return sum + product.price * product.quantity;
     }, 0);
 
-    // Update item count
+    // UPDATE ITEM COUNT
     itemCount.textContent = `${totalItems} ITEMS`;
 
-    // Update prices
+    // UPDATE PRICES
     subtotalElement.textContent = formatPrice(subtotal);
     totalElement.textContent = formatPrice(subtotal);
 
-    // Show empty cart message
+    // SHOW EMPTY CART MESSAGE
     if (cart.length === 0) {
         emptyCart.style.display = "block";
         checkoutButton.disabled = true;
@@ -83,13 +83,13 @@ function displayCart() {
         checkoutButton.disabled = false;
     }
 
-    // Create product elements
+    // CREATE PRODUCT ELEMENTS
     cart.forEach((product, index) => {
 
         const cartItem = document.createElement("div");
         cartItem.className = "cart-item";
 
-        // Product information
+        // PRODUCT INFORMATION
         const productInfo = document.createElement("div");
         productInfo.className = "product-info";
 
@@ -103,7 +103,7 @@ function displayCart() {
         productInfo.appendChild(productPrice);
 
 
-        // Quantity controls
+        // QUANTITY CONTROLS
         const quantityControls = document.createElement("div");
         quantityControls.className = "quantity-controls";
 
@@ -129,7 +129,7 @@ function displayCart() {
         );
 
 
-        // Price and remove button
+        // PRICE AND REMOVE BUTTON
         const itemRight = document.createElement("div");
         itemRight.className = "item-right";
 
@@ -148,7 +148,7 @@ function displayCart() {
 
         itemRight.append(itemPrice, removeButton);
 
-        // Add everything to the cart
+        // ADD EVERYTHING TO THE CART
         cartItem.append(
             productInfo,
             quantityControls,
@@ -190,6 +190,7 @@ cartItemsContainer.addEventListener("click", function(event) {
     displayCart();
 });
 
+
 // CHECKOUT
 checkoutButton.addEventListener("click", function() {
 
@@ -208,9 +209,11 @@ checkoutButton.addEventListener("click", function() {
 
         alert("Your demo order was completed successfully!");
 
-       window.location.href = "home.html";
+        window.location.href = "shop.html";
+        
     }
 });
+
 
 // INITIALIZE CART
 displayCart();

@@ -1,28 +1,23 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // GET CURRENT PAGE
     const currentPage = window.location.pathname
         .split("/")
         .pop()
         .toLowerCase();
 
-    // NAVBAR HTML
     const navbarHTML = `
-        <!-- BACKGROUND EFFECTS -->
         <div class="background-effects">
             <div class="glow glow-one"></div>
             <div class="glow glow-two"></div>
             <div class="grid-overlay"></div>
         </div>
 
-        <!-- FLOATING CODE SYMBOLS -->
         <div class="floating-code code-one">&lt;/&gt;</div>
         <div class="floating-code code-two">{ }</div>
         <div class="floating-code code-three">&lt;div&gt;</div>
         <div class="floating-code code-four">0101</div>
 
-        <!-- NAVIGATION -->
         <header class="navbar">
 
             <a href="home.html" class="logo">
@@ -35,11 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="home.html"
                    class="${currentPage === "home.html" ? "active" : ""}">
                    HOME
-                </a>
-
-                <a href="index.html"
-                   class="${currentPage === "index.html" ? "active" : ""}">
-                   Register
                 </a>
 
                 <a href="about.html"
@@ -79,19 +69,96 @@ document.addEventListener("DOMContentLoaded", function () {
 
             </nav>
 
-            <a href="signin.html" class="developer-btn">
-                &lt;/&gt; Sign In
-            </a>
+            <div id="account-area">
+                <a href="signin.html" class="developer-btn">
+                    &lt;/&gt; Log In
+                </a>
+            </div>
 
         </header>
     `;
 
     // PREVENT DUPLICATE NAVBAR
     if (!document.querySelector(".navbar")) {
-        document.body.insertAdjacentHTML(
-            "afterbegin",
-            navbarHTML
-        );
+        document.body.insertAdjacentHTML("afterbegin", navbarHTML);
     }
+
+    // CHECK LOGIN STATUS
+    fetch("auth-status.php")
+        .then(response => response.json())
+        .then(data => {
+
+            const accountArea = document.getElementById("account-area");
+
+            if (!accountArea || !data.loggedIn) return;
+
+            const user = data.user;
+
+            const initial = (
+                user.name.trim().charAt(0) || "U"
+            ).toUpperCase();
+
+            accountArea.innerHTML = `
+                <div class="profile-wrapper">
+
+                    <button class="profile-avatar" id="profileAvatar"
+                        title="${user.username}">
+                        ${initial}
+                    </button>
+
+                    <div class="profile-menu" id="profileMenu">
+
+                        <p class="profile-name"></p>
+
+                        <button class="logout-btn" id="logoutBtn">
+                            Log Out
+                        </button>
+
+                    </div>
+
+                </div>
+            `;
+
+            // DISPLAY USERNAME SAFELY
+            accountArea.querySelector(".profile-name").textContent =
+                user.username;
+
+            const avatar = document.getElementById("profileAvatar");
+            const menu = document.getElementById("profileMenu");
+
+            // OPEN / CLOSE PROFILE MENU
+            avatar.addEventListener("click", function() {
+                menu.classList.toggle("show");
+            });
+
+            // CLOSE MENU WHEN CLICKING OUTSIDE
+            document.addEventListener("click", function(event) {
+                if (!accountArea.contains(event.target)) {
+                    menu.classList.remove("show");
+                }
+            });
+
+            // LOG OUT
+            document.getElementById("logoutBtn")
+                .addEventListener("click", async function() {
+
+                    try {
+
+                        await fetch("logout.php", {
+                            method: "POST"
+                        });
+
+                        window.location.href = "signin.html";
+
+                    } catch (error) {
+                        alert("Could not log out. Please try again.");
+                    }
+
+                });
+
+        })
+        .catch(error => {
+            console.error("Could not check login status:", error);
+        });
 
 });
