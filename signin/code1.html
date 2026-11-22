@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,10 @@
 <body>
 
 <nav class="navbar">
-    <a href="home.html" class="logo"></a>CODE<span>BLOOM</span></a>
+    <a href="home.html" class="logo">
+        <span class="logo-icon">♛</span>
+        CODE<span>BLOOM</span>
+    </a>
 
     <a href="shop.html" class="back-link">
         <i class="fa-solid fa-arrow-left"></i> Back to Shop
@@ -35,7 +39,6 @@
     </p>
 
     <!-- COURSE INTRO -->
-
     <section class="course-intro">
 
         <div>
@@ -62,7 +65,6 @@
     </section>
 
     <!-- CLICK AND EXPLORE -->
-
     <section class="learning-section">
 
         <div class="section-title">
@@ -134,7 +136,6 @@
     </section>
 
     <!-- HTML PLAYGROUND -->
-
     <section class="learning-section">
 
         <div class="section-title">
@@ -193,7 +194,6 @@ Example:
     </section>
 
     <!-- BUILD YOUR ELEMENT -->
-
     <section class="learning-section">
 
         <div class="section-title">
@@ -249,7 +249,6 @@ Example:
     </section>
 
     <!-- QUIZ -->
-
     <section class="learning-section quiz-section">
 
         <div class="section-title">
@@ -284,7 +283,6 @@ Example:
     </section>
 
     <!-- MINI CHALLENGE -->
-
     <section class="learning-section challenge-section">
 
         <div class="section-title">
@@ -324,7 +322,6 @@ Example:
     </section>
 
     <!-- COURSE ENDING -->
-
     <section class="course-ending">
 
         <i class="fa-solid fa-rocket"></i>
@@ -345,7 +342,6 @@ Example:
 <footer>
     CODE YOUR FUTURE © 2026 | CODEBLOOM
 </footer>
-
 
 <script>
 
@@ -412,11 +408,8 @@ elementOptions.forEach(function(option) {
         const data = elementData[option.dataset.element];
 
         document.getElementById("elementName").textContent = data.name;
-
         document.getElementById("elementDescription").textContent = data.description;
-
         document.getElementById("elementCode").textContent = data.code;
-
         document.getElementById("elementDemo").innerHTML = data.demo;
 
     });
@@ -430,16 +423,12 @@ const htmlEditor = document.getElementById("htmlEditor");
 const htmlPreview = document.getElementById("htmlPreview");
 
 document.getElementById("runHTML").addEventListener("click", function() {
-
     htmlPreview.srcdoc = htmlEditor.value;
-
 });
 
 document.getElementById("clearHTML").addEventListener("click", function() {
-
     htmlEditor.value = "";
     htmlPreview.srcdoc = "";
-
 });
 
 
@@ -543,9 +532,7 @@ function showQuestion() {
         ((questionIndex + 1) / questions.length * 100) + "%";
 
     quizQuestion.textContent = current.question;
-
     quizAnswers.innerHTML = "";
-
     quizMessage.textContent = "";
 
     nextQuestion.disabled = true;
@@ -669,16 +656,28 @@ document.getElementById("checkChallenge").addEventListener("click", function() {
     if (/^<h1>\s*I LOVE CODING\s*<\/h1>$/i.test(answer)) {
 
         message.textContent = "Amazing! Challenge completed!";
-
         message.className = "success-message";
 
     } else {
 
         message.textContent = "Try again! Hint: Use the <h1> tag.";
-
         message.className = "error-message";
 
     }
+
+});
+
+
+// SAVE SHOP SCROLL POSITION BEFORE LEAVING THIS PAGE
+
+document.querySelectorAll(".back-link, .buy-btn").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        // The shop page restores the position saved before opening this course.
+        // Do not overwrite that saved position here.
+
+    });
 
 });
 

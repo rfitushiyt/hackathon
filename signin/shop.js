@@ -4,15 +4,60 @@
 // ========================================
 
 
+// SAVE SHOP SCROLL POSITION BEFORE OPENING A PRODUCT
+
+document.querySelectorAll(".view-btn").forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        sessionStorage.setItem(
+            "codebloomShopScroll",
+            window.scrollY
+        );
+
+    });
+
+});
+
+
+// RESTORE SHOP SCROLL POSITION WHEN RETURNING
+
+window.addEventListener("pageshow", function() {
+
+    const savedPosition = sessionStorage.getItem(
+        "codebloomShopScroll"
+    );
+
+    if (savedPosition !== null) {
+
+        setTimeout(function() {
+
+            window.scrollTo({
+                top: Number(savedPosition),
+                behavior: "instant"
+            });
+
+            sessionStorage.removeItem("codebloomShopScroll");
+
+        }, 200);
+
+    }
+
+});
+
+
 // GET SAVED CART
+
 let cart = [];
 
 try {
+
     const savedCart = JSON.parse(
         localStorage.getItem("codebloomCart")
     );
 
     if (Array.isArray(savedCart)) {
+
         cart = savedCart.filter(product =>
             product &&
             typeof product.name === "string" &&
@@ -25,22 +70,28 @@ try {
             product.price = Number(product.price);
             product.quantity = Number(product.quantity);
         });
+
     }
+
 } catch (error) {
     cart = [];
 }
 
 
 // SAVE CART
+
 function saveCart() {
+
     localStorage.setItem(
         "codebloomCart",
         JSON.stringify(cart)
     );
+
 }
 
 
 // UPDATE CART COUNT
+
 function updateCartCount() {
 
     const countElement = document.getElementById("cart-count");
@@ -52,10 +103,12 @@ function updateCartCount() {
     }, 0);
 
     countElement.textContent = totalItems;
+
 }
 
 
 // ADD TO CART
+
 function addToCart(button) {
 
     const productCard = button.closest(".product-card");
@@ -86,12 +139,9 @@ function addToCart(button) {
         return;
     }
 
-
-    // CHECK IF PRODUCT EXISTS
     const existingProduct = cart.find(product => {
         return product.name === productName;
     });
-
 
     if (existingProduct) {
 
@@ -107,21 +157,16 @@ function addToCart(button) {
 
     }
 
-
-    // SAVE AND UPDATE
     saveCart();
     updateCartCount();
 
-
-    // BUTTON FEEDBACK
     const originalText = button.textContent;
 
     button.textContent = "Added ✓";
     button.classList.add("added");
-
     button.disabled = true;
 
-    setTimeout(() => {
+    setTimeout(function() {
 
         button.textContent = originalText;
         button.classList.remove("added");
@@ -132,7 +177,8 @@ function addToCart(button) {
 }
 
 
-// CONNECT ALL BUTTONS
+// CONNECT ADD TO CART BUTTONS
+
 document.querySelectorAll(".add-btn").forEach(button => {
 
     button.addEventListener("click", function() {
@@ -142,5 +188,22 @@ document.querySelectorAll(".add-btn").forEach(button => {
 });
 
 
-// INITIALIZE CART
+// INITIALIZE CART COUNT
+
 updateCartCount();
+
+// SAVE SCROLL POSITION WHILE SCROLLING
+window.addEventListener("scroll", function () {
+    sessionStorage.setItem("codebloomShopScroll", window.scrollY);
+});
+
+// RESTORE SCROLL POSITION WHEN RETURNING TO SHOP
+window.addEventListener("pageshow", function () {
+    const savedPosition = sessionStorage.getItem("codebloomShopScroll");
+
+    if (savedPosition !== null) {
+        requestAnimationFrame(function () {
+            window.scrollTo(0, Number(savedPosition));
+        });
+    }
+});
