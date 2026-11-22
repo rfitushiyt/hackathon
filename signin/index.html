@@ -6,19 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CODEBLOOM</title>
+    <title>CODEBLOOM | Register</title>
 
-    <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="navbar.css">
-
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- CSS FILES -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
 
+    <!-- JAVASCRIPT -->
     <script src="script.js" defer></script>
+
 </head>
 
 <body>
@@ -35,6 +37,7 @@
     <div class="floating-code code-two">{ }</div>
     <div class="floating-code code-three">&lt;div&gt;</div>
     <div class="floating-code code-four">0101</div>
+
 
     <!-- MAIN CONTENT -->
     <main class="main-container" id="home">
@@ -147,8 +150,14 @@
 
 
             <!-- SIGN UP FORM -->
-            <form id="signupForm" novalidate>
+            <!-- CONNECTED TO PHP DATABASE -->
 
+            <form
+                id="signupForm"
+                action="register.php"
+                method="POST"
+                novalidate
+            >
 
                 <!-- FULL NAME -->
                 <div class="input-wrapper">
@@ -162,6 +171,7 @@
                             name="name"
                             placeholder="Full Name"
                             autocomplete="name"
+                            required
                         >
                     </div>
 
@@ -182,7 +192,8 @@
                             id="username"
                             name="username"
                             placeholder="Username"
-                            autocomplete="off"
+                            autocomplete="username"
+                            required
                         >
                     </div>
 
@@ -204,6 +215,7 @@
                             name="email"
                             placeholder="Email Address"
                             autocomplete="email"
+                            required
                         >
                     </div>
 
@@ -225,6 +237,7 @@
                             name="password"
                             placeholder="Password"
                             autocomplete="new-password"
+                            required
                         >
 
                         <button
@@ -255,6 +268,7 @@
                             name="confirmPassword"
                             placeholder="Confirm Password"
                             autocomplete="new-password"
+                            required
                         >
 
                         <button
@@ -310,7 +324,9 @@
 
 
             <div class="form-bottom-text">
-               <h1> YOUR FUTURE STARTS WITH ONE LINE OF CODE.</h1>
+                <h1>
+                    YOUR FUTURE STARTS WITH ONE LINE OF CODE.
+                </h1>
             </div>
 
         </section>
@@ -343,6 +359,8 @@
 
     </footer>
 
+
+    <!-- SHARED NAVBAR -->
     <script src="navbar.js"></script>
 
 </body>

@@ -25,55 +25,6 @@ body::before {
     z-index: -1;
 }
 
-/* NAVBAR */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 7%;
-    background: rgba(23, 10, 43, 0.9);
-    border-bottom: 1px solid #ffffff15;
-    gap: 20px;
-}
-
-.logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    color: white;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-.logo i {
-    color: #D9A3FF;
-}
-
-.logo span {
-    color: #C77DFF;
-}
-
-.navbar nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 22px;
-}
-
-.navbar nav a {
-    color: #c8b9d8;
-    text-decoration: none;
-    font-size: 12px;
-    transition: 0.3s;
-}
-
-.navbar nav a:hover,
-.navbar nav a.active {
-    color: #D9A3FF;
-    text-shadow: 0 0 12px #A100FF;
-}
-
 /* HERO */
 
 .hero {

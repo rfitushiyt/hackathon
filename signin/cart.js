@@ -190,7 +190,6 @@ cartItemsContainer.addEventListener("click", function(event) {
     displayCart();
 });
 
-
 // CHECKOUT
 checkoutButton.addEventListener("click", function() {
 
@@ -209,10 +208,9 @@ checkoutButton.addEventListener("click", function() {
 
         alert("Your demo order was completed successfully!");
 
-        window.location.href = "index.html";
+        window.location.href = "home.html";
     }
 });
-
 
 // INITIALIZE CART
 displayCart();

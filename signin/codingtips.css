@@ -31,58 +31,6 @@ body::before {
 }
 
 /* =================================
-   NAVBAR
-================================= */
-
-.navbar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
-    padding: 22px 6%;
-    background: #170A2BDD;
-    border-bottom: 1px solid #ffffff20;
-    position: relative;
-    z-index: 10;
-}
-
-.logo {
-    color: white;
-    text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    white-space: nowrap;
-}
-
-.logo span,
-footer h2 span {
-    color: #FF2E93;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 17px;
-}
-
-.nav-links a {
-    color: #ddd;
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #FF2E93;
-}
-
-/* =================================
    HERO
 ================================= */
 

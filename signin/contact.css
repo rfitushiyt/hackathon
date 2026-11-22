@@ -74,95 +74,11 @@ body::before {
     z-index: -1;
 }
 
-/* NAVBAR */
-
-header {
-    position: relative;
-    z-index: 10;
-}
+/* NAVBAR - REMOVE BOTTOM PINK LINE */
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 7%;
-    background: rgba(23,10,43,0.75);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.logo {
-    color: white;
-    text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.logo span,
-.footer-logo span {
-    color: var(--pink);
-}
-
-.logo small {
-    display: block;
-    color: var(--lavender);
-    font-family: 'Poppins', sans-serif;
-    font-size: 8px;
-    letter-spacing: 3px;
-    margin-top: 5px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #C7B7D8;
-    font-size: 12px;
-    transition: 0.3s;
-    position: relative;
-}
-
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: -7px;
-    background: var(--pink);
-    transition: 0.3s;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: white;
-}
-
-.nav-btn {
-    text-decoration: none;
-    color: white;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 12px 20px;
-    border: 1px solid rgba(255,46,147,0.5);
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-.nav-btn:hover {
-    background: var(--pink);
-    box-shadow: 0 0 20px rgba(255,46,147,0.5);
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
 /* HERO */

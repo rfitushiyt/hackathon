@@ -311,3 +311,60 @@
     font-weight: 700;
     box-shadow: 0 0 12px #A100FF80;
 }
+
+/* REMOVE UNDERLINE FROM NAVBAR LINKS */
+
+.navbar .nav-links a,
+.navbar .nav-links a:hover,
+.navbar .nav-links a:focus,
+.navbar .nav-links a.active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+/* REMOVE PINK LINES CREATED BY PSEUDO ELEMENTS */
+
+.navbar .nav-links a::before,
+.navbar .nav-links a::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* KEEP PURPLE HOVER EFFECT */
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    color: white;
+    background: #A100FF25;
+    box-shadow: 0 0 15px #A100FF50;
+}
+
+/* FORCE REMOVE ALL NAVBAR UNDERLINES */
+
+.navbar .nav-links a,
+.navbar .nav-links a:hover,
+.navbar .nav-links a:focus,
+.navbar .nav-links a:active,
+.navbar .nav-links a.active {
+    text-decoration: none !important;
+    border: none !important;
+    border-bottom: 0 !important;
+    background-image: none !important;
+}
+
+/* REMOVE UNDERLINE PSEUDO ELEMENTS */
+
+.navbar .nav-links a::before,
+.navbar .nav-links a::after,
+.navbar .nav-links a:hover::before,
+.navbar .nav-links a:hover::after,
+.navbar .nav-links a.active::before,
+.navbar .nav-links a.active::after {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
