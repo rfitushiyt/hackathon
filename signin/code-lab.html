@@ -1,11 +1,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Code Lab | CODEBLOOM</title>
 
     <link rel="stylesheet" href="code-lab.css">
@@ -17,43 +15,30 @@
 </head>
 
 <body>
-    <main>
 
-        <section class="hero">
+<main>
 
-            <span class="tag">YOUR DIGITAL WORKSPACE</span>
+    <section class="hero">
+        <span class="tag">YOUR DIGITAL WORKSPACE</span>
+        <h1>CODE <span>LAB</span></h1>
+        <p>Bring your ideas to life. Write code, experiment and create something amazing.</p>
 
-            <h1>CODE <span>LAB</span></h1>
+        <div class="hero-icon">
+            <i class="fa-solid fa-code"></i>
+        </div>
+    </section>
 
-            <p>
-                Bring your ideas to life.
-                Write code, experiment and create something amazing.
-            </p>
+    <section class="challenge-section">
+        <div class="challenge-card">
 
-            <div class="hero-icon">
-                <i class="fa-solid fa-code"></i>
-            </div>
-
-        </section>
-
-
-        <!-- RANDOM CODING CHALLENGE -->
-
-        <section class="challenge-section">
-
-            <div class="challenge-card">
-
+            <div class="challenge-info">
                 <div class="challenge-top">
-
                     <span class="challenge-tag">
                         <i class="fa-solid fa-bolt"></i>
                         RANDOM CODING CHALLENGE
                     </span>
 
-                    <span id="challengeLevel" class="challenge-level">
-                        EASY
-                    </span>
-
+                    <span id="challengeLevel" class="challenge-level">EASY</span>
                 </div>
 
                 <h2 id="challengeTitle">Build a Profile Card</h2>
@@ -62,203 +47,146 @@
                     Create a modern personal profile card using HTML and CSS.
                 </p>
 
+                <button id="newChallenge">
+                    <i class="fa-solid fa-shuffle"></i>
+                    NEW CHALLENGE
+                </button>
+            </div>
+
+            <div class="challenge-tasks">
                 <h3>
                     <i class="fa-solid fa-list-check"></i>
                     YOUR TASKS
                 </h3>
 
                 <ul id="challengeTasks"></ul>
-
-                <button id="newChallenge">
-                    <i class="fa-solid fa-shuffle"></i>
-                    NEW RANDOM CHALLENGE
-                </button>
-
             </div>
 
-        </section>
+        </div>
+    </section>
 
+    <section class="editor-section">
 
-        <!-- CODE EDITOR -->
+        <div class="editor-heading">
+            <div>
+                <h2>Online Code Editor</h2>
+                <p>Write your code and preview your website.</p>
+            </div>
 
-        <section class="editor-section">
+            <span class="live-label">
+                <span class="dot"></span>
+                LIVE EDITOR
+            </span>
+        </div>
 
-            <div class="editor-heading">
+        <div class="editor-container">
 
-                <div>
-                    <h2>Online Code Editor</h2>
-                    <p>Write your code and preview your website.</p>
-                </div>
-
-                <span class="live-label">
-                    <span class="dot"></span>
-                    LIVE EDITOR
+            <div class="editor-tabs">
+                <span class="html-tab">
+                    <i class="fa-brands fa-html5"></i> HTML
                 </span>
 
+                <span class="css-tab">
+                    <i class="fa-brands fa-css3-alt"></i> CSS
+                </span>
+
+                <span class="js-tab">
+                    <i class="fa-brands fa-js"></i> JavaScript
+                </span>
             </div>
 
+            <div class="editor-grid">
 
-            <div class="editor-container">
+                <div class="code-inputs">
 
-                <div class="editor-tabs">
-
-                    <span class="html-tab">
-                        <i class="fa-brands fa-html5"></i>
-                        HTML
-                    </span>
-
-                    <span class="css-tab">
-                        <i class="fa-brands fa-css3-alt"></i>
-                        CSS
-                    </span>
-
-                    <span class="js-tab">
-                        <i class="fa-brands fa-js"></i>
-                        JavaScript
-                    </span>
-
-                </div>
-
-
-                <div class="editor-grid">
-
-                    <div class="code-inputs">
-
-                        <div class="code-box">
-
-                            <label>HTML CODE</label>
-
-                            <textarea id="htmlCode" placeholder="Write your HTML here..."><h1>Hello CODEBLOOM!</h1>
-<p>My first website.</p>
-<button>Click Me</button></textarea>
-
-                        </div>
-
-
-                        <div class="code-box">
-
-                            <label>CSS CODE</label>
-
-                            <textarea id="cssCode" placeholder="Write your CSS here...">body {
-    background: #170A2B;
-    color: white;
-    text-align: center;
-    font-family: Arial;
-    padding: 50px;
-}
-
-h1 {
-    color: #D9A3FF;
-}
-
-button {
-    background: #A100FF;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 20px;
-}</textarea>
-
-                        </div>
-
-
-                        <div class="code-box">
-
-                            <label>JAVASCRIPT CODE</label>
-
-                            <textarea id="jsCode" placeholder="Write your JavaScript here...">document.querySelector("button").onclick = function() {
-    alert("Welcome to CODEBLOOM!");
-};</textarea>
-
-                        </div>
-
+                    <div class="code-box">
+                        <label>HTML CODE</label>
+                        <textarea id="htmlCode" placeholder="Write your HTML here..." spellcheck="false"></textarea>
                     </div>
 
+                    <div class="code-box">
+                        <label>CSS CODE</label>
+                        <textarea id="cssCode" placeholder="Write your CSS here..." spellcheck="false"></textarea>
+                    </div>
 
-                    <div class="preview-box">
-
-                        <div class="preview-heading">
-
-                            <span>
-                                <i class="fa-solid fa-eye"></i>
-                                LIVE PREVIEW
-                            </span>
-
-                            <span class="preview-status">READY</span>
-
-                        </div>
-
-                        <iframe
-                            id="preview"
-                            title="Code preview"
-                            sandbox="allow-scripts">
-                        </iframe>
-
+                    <div class="code-box">
+                        <label>JAVASCRIPT CODE</label>
+                        <textarea id="jsCode" placeholder="Write your JavaScript here..." spellcheck="false"></textarea>
                     </div>
 
                 </div>
 
+                <div class="preview-box">
 
-                <div class="editor-buttons">
+                    <div class="preview-heading">
+                        <span>
+                            <i class="fa-solid fa-eye"></i>
+                            LIVE PREVIEW
+                        </span>
 
-                    <button id="runCode">
-                        <i class="fa-solid fa-play"></i>
-                        RUN CODE
-                    </button>
+                        <span class="preview-status">READY</span>
+                    </div>
 
-                    <button id="resetCode">
-                        <i class="fa-solid fa-rotate-left"></i>
-                        RESET
-                    </button>
+                    <iframe
+                        id="preview"
+                        title="Code preview"
+                        sandbox="allow-scripts">
+                    </iframe>
 
                 </div>
 
             </div>
 
-        </section>
+            <div class="editor-buttons">
+                <button id="runCode">
+                    <i class="fa-solid fa-play"></i>
+                    RUN CODE
+                </button>
 
-
-        <!-- SKILLS SECTION -->
-
-        <section class="tips-section">
-
-            <h2>MASTER YOUR <span>SKILLS</span></h2>
-
-            <div class="tips-grid">
-
-                <div class="tip-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <h3>HTML</h3>
-                    <p>Build the structure of your website.</p>
-                </div>
-
-                <div class="tip-card">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <h3>CSS</h3>
-                    <p>Make your website beautiful and unique.</p>
-                </div>
-
-                <div class="tip-card">
-                    <i class="fa-brands fa-js"></i>
-                    <h3>JavaScript</h3>
-                    <p>Make your website interactive.</p>
-                </div>
-
+                <button id="resetCode">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    RESET
+                </button>
             </div>
 
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <section class="tips-section">
+        <h2>MASTER YOUR <span>SKILLS</span></h2>
 
+        <div class="tips-grid">
 
-    <footer>
-        CODE YOUR FUTURE © 2026
-        <p>HTML • CSS • JAVASCRIPT</p>
-    </footer>
+            <div class="tip-card">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Build the structure of your website.</p>
+            </div>
 
+            <div class="tip-card">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Make your website beautiful and unique.</p>
+            </div>
 
-    <script src="code-lab.js"></script>
-    <script src="navbar.js"></script>
+            <div class="tip-card">
+                <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>Make your website interactive.</p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    CODE YOUR FUTURE © 2026
+    <p>HTML • CSS • JAVASCRIPT</p>
+</footer>
+
+<script src="code-lab.js"></script>
+<script src="navbar.js"></script>
 
 </body>
 </html>

@@ -10,6 +10,7 @@ body {
     color: white;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -29,7 +30,7 @@ body::before {
 
 .hero {
     text-align: center;
-    padding: 85px 20px 55px;
+    padding: 55px 20px 35px;
     position: relative;
 }
 
@@ -44,8 +45,8 @@ body::before {
 
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: clamp(45px, 8vw, 85px);
-    margin: 30px 0 15px;
+    font-size: clamp(40px, 6vw, 70px);
+    margin: 22px 0 12px;
 }
 
 .hero h1 span {
@@ -55,20 +56,20 @@ body::before {
 
 .hero p {
     color: #b6a7c8;
-    font-size: 14px;
+    font-size: 13px;
     max-width: 600px;
     margin: auto;
     line-height: 1.8;
 }
 
 .hero-icon {
-    margin: 35px auto 0;
-    width: 75px;
-    height: 75px;
-    border-radius: 20px;
+    margin: 20px auto 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
     display: grid;
     place-items: center;
-    font-size: 30px;
+    font-size: 25px;
     color: #D9A3FF;
     background: #A100FF20;
     border: 1px solid #A100FF;
@@ -78,9 +79,9 @@ body::before {
 /* RANDOM CHALLENGE */
 
 .challenge-section {
-    max-width: 1250px;
-    margin: 20px auto 55px;
-    padding: 0 25px;
+    max-width: 1450px;
+    margin: 15px auto 35px;
+    padding: 0 35px;
 }
 
 .challenge-card {
@@ -88,9 +89,13 @@ body::before {
     overflow: hidden;
     background: linear-gradient(135deg, #211333, #30134b);
     border: 1px solid #A100FF80;
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 0 35px #A100FF20;
+    border-radius: 18px;
+    padding: 22px 30px;
+    box-shadow: 0 0 30px #A100FF20;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
 }
 
 .challenge-card::before {
@@ -106,17 +111,23 @@ body::before {
     pointer-events: none;
 }
 
+.challenge-info,
+.challenge-tasks {
+    position: relative;
+    z-index: 1;
+}
+
 .challenge-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .challenge-tag {
     color: #D9A3FF;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 2px;
 }
 
@@ -125,8 +136,8 @@ body::before {
     color: #00ff99;
     border: 1px solid #00ff9960;
     border-radius: 20px;
-    padding: 7px 15px;
-    font-size: 10px;
+    padding: 6px 13px;
+    font-size: 9px;
     font-weight: 700;
 }
 
@@ -145,30 +156,29 @@ body::before {
 .challenge-card h2 {
     font-family: 'Orbitron', sans-serif;
     color: white;
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.challenge-card > p {
+.challenge-info > p {
     color: #b6a7c8;
-    font-size: 13px;
-    line-height: 1.8;
-    margin-bottom: 25px;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 .challenge-card h3 {
     color: #D9A3FF;
     font-family: 'Orbitron', sans-serif;
-    font-size: 12px;
-    margin-bottom: 15px;
+    font-size: 11px;
+    margin-bottom: 10px;
 }
 
 .challenge-card ul {
-    padding-left: 22px;
+    padding-left: 20px;
     color: #d5c7e5;
-    font-size: 13px;
-    line-height: 2.2;
-    margin-bottom: 25px;
+    font-size: 11px;
+    line-height: 1.9;
 }
 
 #newChallenge {
@@ -176,38 +186,38 @@ body::before {
     color: white;
     border: none;
     border-radius: 30px;
-    padding: 13px 25px;
+    padding: 11px 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 #newChallenge:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: 0 0 25px #A100FF80;
 }
 
 /* EDITOR */
 
 .editor-section {
-    max-width: 1250px;
-    margin: 20px auto 90px;
-    padding: 0 25px;
+    max-width: 1600px;
+    margin: 35px auto 80px;
+    padding: 0 35px;
 }
 
 .editor-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     gap: 20px;
 }
 
 .editor-heading h2 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .editor-heading p {
@@ -236,19 +246,18 @@ body::before {
     background: #211333;
     border: 1px solid #A100FF60;
     border-radius: 18px;
-    padding: 20px;
+    padding: 22px;
     box-shadow: 0 0 35px #A100FF15;
 }
 
 .editor-tabs {
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
+    gap: 35px;
     border-bottom: 1px solid #ffffff20;
-    padding-bottom: 18px;
+    padding-bottom: 17px;
     margin-bottom: 20px;
     color: #c8b9d8;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .html-tab i {
@@ -265,14 +274,15 @@ body::before {
 
 .editor-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 22px;
+    align-items: stretch;
 }
 
 .code-inputs {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 14px;
 }
 
 .code-box {
@@ -280,6 +290,14 @@ body::before {
     border: 1px solid #ffffff20;
     border-radius: 12px;
     padding: 15px;
+    flex: 1;
+    min-height: 190px;
+    transition: 0.3s;
+}
+
+.code-box:focus-within {
+    border-color: #A100FF;
+    box-shadow: 0 0 15px #A100FF25;
 }
 
 .code-box label {
@@ -293,16 +311,23 @@ body::before {
 
 .code-box textarea {
     width: 100%;
-    height: 115px;
+    height: 145px;
     background: transparent;
     color: #e5d5ff;
     border: none;
     outline: none;
     resize: vertical;
     font-family: Consolas, monospace;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.7;
+    tab-size: 4;
 }
+
+.code-box textarea::placeholder {
+    color: #766580;
+}
+
+/* PREVIEW */
 
 .preview-box {
     background: #10091b;
@@ -310,28 +335,33 @@ body::before {
     border-radius: 12px;
     overflow: hidden;
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .preview-heading {
-    padding: 15px;
+    padding: 16px 18px;
     display: flex;
     justify-content: space-between;
     background: #251638;
     color: #D9A3FF;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .preview-status {
     color: #00ff99;
+    font-size: 11px;
 }
 
 #preview {
     width: 100%;
-    height: 100%;
-    min-height: 430px;
+    flex: 1;
+    min-height: 640px;
     background: white;
     border: none;
 }
+
+/* BUTTONS */
 
 .editor-buttons {
     display: flex;
@@ -340,7 +370,7 @@ body::before {
 }
 
 .editor-buttons button {
-    padding: 13px 25px;
+    padding: 14px 30px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -362,21 +392,21 @@ body::before {
 }
 
 .editor-buttons button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: 0 0 20px #A100FF70;
 }
 
 /* SKILLS */
 
 .tips-section {
-    padding: 60px 7%;
+    padding: 55px 7%;
     text-align: center;
 }
 
 .tips-section h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 .tips-section h2 span {
@@ -394,7 +424,7 @@ body::before {
 .tip-card {
     background: #211333;
     border: 1px solid #A100FF40;
-    padding: 35px 20px;
+    padding: 30px 20px;
     border-radius: 16px;
     transition: 0.3s;
 }
@@ -441,26 +471,41 @@ footer p {
 
 /* RESPONSIVE */
 
-@media (max-width: 900px) {
-
-    .navbar {
-        flex-direction: column;
+@media (max-width: 1000px) {
+    .challenge-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .editor-grid {
         grid-template-columns: 1fr;
     }
 
+    #preview {
+        min-height: 500px;
+    }
+
     .tips-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
+    .hero {
+        padding: 40px 15px 25px;
+    }
 
-    .navbar nav {
-        gap: 12px;
+    .challenge-section,
+    .editor-section {
+        padding: 0 15px;
+    }
+
+    .challenge-card {
+        padding: 22px 18px;
+    }
+
+    .editor-container {
+        padding: 13px;
     }
 
     .editor-heading {
@@ -476,16 +521,16 @@ footer p {
         width: 100%;
     }
 
-    .challenge-card {
-        padding: 25px 20px;
+    .editor-tabs {
+        gap: 15px;
+        font-size: 11px;
     }
 
-    .challenge-card h2 {
-        font-size: 19px;
+    .code-box textarea {
+        font-size: 12px;
     }
 
-    #newChallenge {
-        width: 100%;
+    #preview {
+        min-height: 400px;
     }
-
 }

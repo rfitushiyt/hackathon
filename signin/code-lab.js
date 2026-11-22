@@ -1,17 +1,23 @@
 
+// ========================================
 // CODEBLOOM - CODE LAB
+// ========================================
 
 const htmlEditor = document.getElementById("htmlCode");
 const cssEditor = document.getElementById("cssCode");
 const jsEditor = document.getElementById("jsCode");
 
 const preview = document.getElementById("preview");
+
 const runButton = document.getElementById("runCode");
 const resetButton = document.getElementById("resetCode");
+
 const previewStatus = document.querySelector(".preview-status");
 
 
+// ========================================
 // RANDOM CHALLENGES
+// ========================================
 
 const challenges = [
 
@@ -35,7 +41,7 @@ const challenges = [
             "Add a song title and artist name.",
             "Add an album cover.",
             "Create play and pause buttons.",
-            "Use JavaScript to change the button text when clicked."
+            "Use JavaScript to change the button text."
         ]
     },
 
@@ -119,7 +125,7 @@ const challenges = [
         tasks: [
             "Add a calculator display.",
             "Create number buttons from 0 to 9.",
-            "Add addition, subtraction, multiplication and division.",
+            "Add mathematical operators.",
             "Make the calculator perform calculations."
         ]
     }
@@ -129,7 +135,9 @@ const challenges = [
 let currentChallenge = -1;
 
 
+// ========================================
 // SHOW RANDOM CHALLENGE
+// ========================================
 
 function showRandomChallenge() {
 
@@ -137,7 +145,10 @@ function showRandomChallenge() {
 
     do {
         randomIndex = Math.floor(Math.random() * challenges.length);
-    } while (randomIndex === currentChallenge);
+    } while (
+        randomIndex === currentChallenge &&
+        challenges.length > 1
+    );
 
     currentChallenge = randomIndex;
 
@@ -167,19 +178,17 @@ function showRandomChallenge() {
     taskList.innerHTML = "";
 
     challenge.tasks.forEach(function(task) {
-
         const li = document.createElement("li");
-
         li.textContent = task;
-
         taskList.appendChild(li);
-
     });
 
 }
 
 
+// ========================================
 // RUN CODE
+// ========================================
 
 function runCode() {
 
@@ -187,12 +196,19 @@ function runCode() {
     const css = cssEditor.value;
     const js = jsEditor.value;
 
-    const safeJS = js.replace(/<\/script/gi, "<\\/script");
+    const safeJS = js.replace(
+        /<\/script/gi,
+        "<\\/script"
+    );
 
     const output = `
         <!DOCTYPE html>
-        <html>
+        <html lang="en">
+
         <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
             <style>
                 ${css}
             </style>
@@ -218,20 +234,27 @@ function runCode() {
 }
 
 
+// ========================================
 // RESET CODE
+// ========================================
 
 function resetCode() {
 
-    htmlEditor.value = htmlEditor.defaultValue;
-    cssEditor.value = cssEditor.defaultValue;
-    jsEditor.value = jsEditor.defaultValue;
+    htmlEditor.value = "";
+    cssEditor.value = "";
+    jsEditor.value = "";
 
-    runCode();
+    preview.srcdoc = "";
+
+    previewStatus.textContent = "READY";
+    previewStatus.style.color = "#00ff99";
 
 }
 
 
+// ========================================
 // BUTTON EVENTS
+// ========================================
 
 runButton.addEventListener("click", runCode);
 
@@ -242,14 +265,17 @@ document.getElementById("newChallenge").addEventListener(
     showRandomChallenge
 );
 
+
+// ========================================
 // START PAGE
+// ========================================
 
 htmlEditor.value = "";
 cssEditor.value = "";
 jsEditor.value = "";
 
+preview.srcdoc = "";
+
+previewStatus.textContent = "READY";
+
 showRandomChallenge();
-
-runCode();
-
-runCode();
