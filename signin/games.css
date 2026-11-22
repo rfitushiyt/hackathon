@@ -476,3 +476,60 @@ body.game-mode .games-container {
 .open-game-btn.started {
     display: none !important;
 }
+
+
+/* =====================================
+   MINI GAMES FIXES
+===================================== */
+
+[hidden] {
+    display: none !important;
+}
+
+.extra-start-btn {
+    display: block;
+    margin: 18px auto;
+}
+
+.game-card.focused .memory-grid {
+    max-width: 420px;
+    margin: 20px auto;
+}
+
+.game-card.focused .quiz-options {
+    max-width: 550px;
+    margin: 20px auto;
+}
+
+.game-card.focused #typingInput {
+    min-height: 100px;
+}
+
+.game-card.focused .bug-area {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.option-btn:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+.memory-card.matched {
+    color: #fff;
+    background: #7200FF;
+    border-color: #FF2E93;
+}
+
+.game-card.focused .game-btn {
+    min-width: 140px;
+}
+
+.game-card.focused .back-games-btn {
+    display: block;
+}
+
+
+[hidden] {
+    display: none !important;
+}

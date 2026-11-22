@@ -1,4 +1,8 @@
 
+/* =====================================
+   CODEBLOOM - CODE LAB
+===================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,14 +34,14 @@ body::before {
 
 .hero {
     text-align: center;
-    padding: 55px 20px 35px;
+    padding: 45px 20px 25px;
     position: relative;
 }
 
 .tag {
     color: #D9A3FF;
     border: 1px solid #A100FF;
-    padding: 9px 20px;
+    padding: 8px 18px;
     border-radius: 30px;
     font-size: 10px;
     letter-spacing: 3px;
@@ -46,7 +50,7 @@ body::before {
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: clamp(40px, 6vw, 70px);
-    margin: 22px 0 12px;
+    margin: 18px 0 10px;
 }
 
 .hero h1 span {
@@ -63,24 +67,26 @@ body::before {
 }
 
 .hero-icon {
-    margin: 20px auto 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 18px;
+    margin: 15px auto 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
     display: grid;
     place-items: center;
-    font-size: 25px;
+    font-size: 22px;
     color: #D9A3FF;
     background: #A100FF20;
     border: 1px solid #A100FF;
     box-shadow: 0 0 30px #A100FF40;
 }
 
-/* RANDOM CHALLENGE */
+/* =====================================
+   COMPACT RANDOM CHALLENGE
+===================================== */
 
 .challenge-section {
     max-width: 1450px;
-    margin: 15px auto 35px;
+    margin: 10px auto 25px;
     padding: 0 35px;
 }
 
@@ -89,13 +95,14 @@ body::before {
     overflow: hidden;
     background: linear-gradient(135deg, #211333, #30134b);
     border: 1px solid #A100FF80;
-    border-radius: 18px;
-    padding: 22px 30px;
-    box-shadow: 0 0 30px #A100FF20;
+    border-radius: 16px;
+    padding: 15px 25px;
+    box-shadow: 0 0 25px #A100FF20;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-    gap: 35px;
+    gap: 20px;
 }
 
 .challenge-card::before {
@@ -115,20 +122,21 @@ body::before {
 .challenge-tasks {
     position: relative;
     z-index: 1;
+    min-width: 0;
 }
 
 .challenge-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
+    gap: 10px;
+    margin-bottom: 9px;
 }
 
 .challenge-tag {
     color: #D9A3FF;
-    font-size: 10px;
-    letter-spacing: 2px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
 }
 
 .challenge-level {
@@ -136,7 +144,7 @@ body::before {
     color: #00ff99;
     border: 1px solid #00ff9960;
     border-radius: 20px;
-    padding: 6px 13px;
+    padding: 5px 11px;
     font-size: 9px;
     font-weight: 700;
 }
@@ -156,29 +164,33 @@ body::before {
 .challenge-card h2 {
     font-family: 'Orbitron', sans-serif;
     color: white;
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 6px;
 }
 
 .challenge-info > p {
     color: #b6a7c8;
-    font-size: 12px;
-    line-height: 1.7;
-    margin-bottom: 15px;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 .challenge-card h3 {
     color: #D9A3FF;
     font-family: 'Orbitron', sans-serif;
-    font-size: 11px;
-    margin-bottom: 10px;
+    font-size: 10px;
+    margin-bottom: 7px;
 }
 
 .challenge-card ul {
-    padding-left: 20px;
+    padding-left: 17px;
     color: #d5c7e5;
-    font-size: 11px;
-    line-height: 1.9;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.challenge-card li {
+    padding: 1px 0;
 }
 
 #newChallenge {
@@ -186,10 +198,10 @@ body::before {
     color: white;
     border: none;
     border-radius: 30px;
-    padding: 11px 20px;
+    padding: 9px 17px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 9px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -199,11 +211,13 @@ body::before {
     box-shadow: 0 0 25px #A100FF80;
 }
 
-/* EDITOR */
+/* =====================================
+   EDITOR
+===================================== */
 
 .editor-section {
-    max-width: 1600px;
-    margin: 35px auto 80px;
+    max-width: 1700px;
+    margin: 25px auto 75px;
     padding: 0 35px;
 }
 
@@ -211,7 +225,7 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     gap: 20px;
 }
 
@@ -223,7 +237,7 @@ body::before {
 .editor-heading p {
     color: #a99bb8;
     font-size: 12px;
-    margin-top: 8px;
+    margin-top: 7px;
 }
 
 .live-label {
@@ -246,7 +260,7 @@ body::before {
     background: #211333;
     border: 1px solid #A100FF60;
     border-radius: 18px;
-    padding: 22px;
+    padding: 20px;
     box-shadow: 0 0 35px #A100FF15;
 }
 
@@ -254,8 +268,8 @@ body::before {
     display: flex;
     gap: 35px;
     border-bottom: 1px solid #ffffff20;
-    padding-bottom: 17px;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 18px;
     color: #c8b9d8;
     font-size: 13px;
 }
@@ -274,24 +288,24 @@ body::before {
 
 .editor-grid {
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 22px;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
     align-items: stretch;
 }
 
 .code-inputs {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
 }
 
 .code-box {
     background: #10091b;
     border: 1px solid #ffffff20;
     border-radius: 12px;
-    padding: 15px;
+    padding: 13px;
     flex: 1;
-    min-height: 190px;
+    min-height: 180px;
     transition: 0.3s;
 }
 
@@ -306,7 +320,7 @@ body::before {
     font-family: 'Orbitron', sans-serif;
     font-size: 10px;
     letter-spacing: 2px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .code-box textarea {
@@ -361,7 +375,7 @@ body::before {
     border: none;
 }
 
-/* BUTTONS */
+/* EDITOR BUTTONS */
 
 .editor-buttons {
     display: flex;
@@ -469,12 +483,15 @@ footer p {
     margin-top: 10px;
 }
 
-/* RESPONSIVE */
+/* =====================================
+   RESPONSIVE
+===================================== */
 
 @media (max-width: 1000px) {
+
     .challenge-card {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr 0.8fr;
+        gap: 15px;
     }
 
     .editor-grid {
@@ -491,6 +508,7 @@ footer p {
 }
 
 @media (max-width: 650px) {
+
     .hero {
         padding: 40px 15px 25px;
     }
@@ -501,7 +519,9 @@ footer p {
     }
 
     .challenge-card {
-        padding: 22px 18px;
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 18px;
     }
 
     .editor-container {
